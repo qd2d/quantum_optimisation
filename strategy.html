@@ -1,0 +1,3267 @@
+{%  extends "layout.html" %}
+
+{% block content %}
+
+
+<tbody>
+<!-- TradingView Widget BEGIN -->
+<div style=" width:1850px;height:10%;overflow: unset; margin-right:10px">
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+ <!-- <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Quotes</span></a> by TradingView</div> -->
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100"
+    },
+    {
+      "proName": "NASDAQ:AAPL",
+      "title": "Apple"
+    },
+    {
+      "proName": "NASDAQ:MSFT",
+      "title": "Microsoft"
+    },
+    {
+      "proName": "NASDAQ:TSLA",
+      "title": "Tesla"
+    },
+    {
+      "proName": "NASDAQ:NVDA",
+      "title": "NVIDIA"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    }
+  ],
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "showSymbolLogo": true,
+  "locale": "en"
+}
+  </script>
+
+</div>
+</div>
+
+
+<!-- TradingView Widget END -->
+</tbody>
+    <!-------->
+
+<head xmlns="" xmlns="" xmlns="" xmlns="http://www.w3.org/1999/html">
+<meta name="robots" contents="noindex">
+
+<div>
+
+<style>
+@media screen and (min-width: 320px) {
+.news_box_desktop {
+    display: none;
+}
+.news_box_mobile {
+    display: block;
+}
+}
+
+@media screen and (max-width: 320px) {
+.news_box_mobile {
+    display: none;
+}
+.news_box_desktop {
+    display: block;
+}
+}
+</style>
+
+<style>
+@import url(http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded|Open+Sans:300,400,700);
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body, html{
+  width: 100%; /*100%*/
+  height: auto; /*100%*/
+
+}
+
+body {
+  font-family: 'Stint Ultra Expanded', sans-serif;
+  font-size: 18px;
+  line-height: 1.618;
+  background: #ffffff;
+  color: rgb(119, 117, 117);
+  transition: background 0.8s ease;
+}
+@media (min-width: 1100px) {
+  body {
+    background: #ffffff;
+  }
+}
+@media (max-width: 1100px) {
+  body {
+    background: #ffffff;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background: #ffffff;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.wrapper:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: -10px;
+}
+
+.container {
+  vertical-align: middle;
+  display: inline-block;
+  white-space: normal;
+}
+
+ul {
+  font-size: 2.618em;
+  line-height: 1;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+  transition: font-size 0.5s ease;
+}
+@media (min-width: 1100px) {
+  ul {
+    font-size: 4.236em;
+  }
+}
+@media (max-width: 1100px) {
+  ul {
+    font-size: 2.618em;
+  }
+}
+@media (max-width: 480px) {
+  ul {
+    font-size: 1.618em;
+  }
+}
+ul:after {
+  display: block;
+  content: ' ';
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.056rem;
+  color: rgba(0, 0, 0, 0.5);
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px 0 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1100px) {
+  ul:after {
+    content: ' '; /*LARGE WIDTH*/
+  }
+}
+@media (max-width: 1100px) {
+  ul:after {
+    content: ' '; /*MEDIUM WIDTH*/
+  }
+}
+@media (max-width: 480px) {
+  ul:after {
+    content: ' ';/*SMALL WIDTH*/
+  }
+}
+                }
+</style>
+
+<!-------------Sass script---->
+<style>
+  /* html {
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: scroll;
+}*/
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 31px 352px #e50404, 802px 682px #e50404, 1571px 770px #e50404, 618px 578px #e50404, 13px 696px #FFF , 1597px 439px #FFF , 1455px 621px #FFF , 1545px 1475px #FFF , 1316px 1417px #FFF , 611px 1234px #FFF , 1903px 30px #FFF , 343px 1999px #FFF , 601px 1941px #FFF , 892px 218px #FFF , 1231px 481px #FFF , 1711px 735px #FFF , 725px 717px #FFF , 1578px 1371px #FFF , 23px 731px #FFF , 1936px 1557px #FFF , 849px 650px #FFF , 577px 166px #FFF , 1102px 1789px #FFF , 306px 1162px #FFF , 1594px 1267px #FFF , 313px 1563px #FFF , 1905px 953px #FFF , 77px 351px #FFF , 1646px 763px #FFF , 731px 398px #FFF , 1195px 1189px #FFF , 1439px 642px #FFF , 1192px 1873px #FFF , 1137px 1136px #FFF , 889px 415px #FFF , 357px 1564px #FFF , 698px 1087px #FFF , 822px 768px #FFF , 1205px 926px #FFF , 1053px 244px #FFF , 1056px 1686px #FFF , 1041px 1957px #FFF , 842px 346px #FFF , 896px 1523px #FFF , 579px 1027px #FFF , 902px 1017px #FFF , 1129px 124px #FFF , 1662px 1311px #FFF , 942px 1735px #FFF , 858px 1509px #FFF , 1647px 721px #FFF , 1455px 1926px #FFF , 839px 1858px #FFF , 1911px 704px #FFF , 1158px 1914px #FFF , 625px 1390px #FFF , 1938px 1467px #FFF , 792px 1153px #FFF , 1892px 1993px #FFF , 650px 31px #FFF , 950px 613px #FFF , 19px 1470px #FFF , 1668px 29px #FFF , 423px 1261px #FFF , 1692px 462px #FFF , 66px 235px #FFF , 1094px 692px #FFF , 427px 548px #FFF , 1785px 698px #FFF , 230px 1637px #FFF , 1363px 1301px #FFF , 635px 1881px #FFF , 1863px 103px #FFF , 984px 434px #FFF , 218px 628px #FFF , 1308px 252px #FFF , 682px 1344px #FFF , 627px 1775px #FFF , 1642px 350px #FFF , 113px 970px #FFF , 41px 851px #FFF , 1222px 739px #FFF , 1530px 1773px #FFF , 1679px 1703px #FFF , 1856px 1778px #FFF , 813px 1175px #FFF , 1322px 734px #FFF , 1462px 353px #FFF , 1953px 54px #FFF , 1167px 1036px #FFF , 676px 391px #FFF , 633px 1164px #FFF , 872px 464px #FFF , 840px 1073px #FFF , 1717px 659px #FFF , 1618px 891px #FFF , 331px 215px #FFF , 1136px 150px #FFF , 580px 1948px #FFF , 848px 1969px #FFF , 960px 1066px #FFF , 215px 657px #FFF , 787px 654px #FFF , 1192px 1375px #FFF , 1966px 190px #FFF , 996px 153px #FFF , 3px 843px #FFF , 337px 941px #FFF , 1760px 867px #FFF , 1089px 1630px #FFF , 672px 1823px #FFF , 1202px 1343px #FFF , 1986px 263px #FFF , 209px 617px #FFF , 1186px 1049px #FFF , 244px 1586px #FFF , 1941px 754px #FFF , 1695px 632px #FFF , 1545px 1673px #FFF , 1071px 494px #FFF , 1540px 973px #FFF , 1785px 1250px #FFF , 185px 88px #FFF , 406px 1801px #FFF , 1348px 627px #FFF , 542px 1327px #FFF , 221px 1046px #FFF , 1396px 469px #FFF , 1655px 1121px #FFF , 712px 626px #FFF , 521px 1520px #FFF , 1755px 449px #FFF , 119px 511px #FFF , 992px 1717px #FFF , 405px 693px #FFF , 1293px 79px #FFF , 250px 1376px #FFF , 667px 1573px #FFF , 1px 645px #FFF , 1643px 438px #FFF , 521px 920px #FFF , 527px 1856px #FFF , 331px 10px #FFF , 1078px 809px #FFF , 1431px 881px #FFF , 1530px 1852px #FFF , 1742px 456px #FFF , 1279px 1382px #FFF , 1468px 759px #FFF , 1418px 72px #FFF , 1560px 1828px #FFF , 1567px 1271px #FFF , 1868px 1681px #FFF , 839px 1048px #FFF , 1737px 551px #FFF , 688px 444px #FFF , 1197px 1848px #FFF , 349px 234px #FFF , 1425px 1734px #FFF , 1361px 396px #FFF , 197px 24px #FFF , 401px 1422px #FFF , 1618px 1922px #FFF , 956px 139px #FFF , 1806px 102px #FFF , 560px 819px #FFF , 57px 159px #FFF , 1490px 659px #FFF , 935px 323px #FFF , 197px 1713px #FFF , 63px 1441px #FFF , 522px 1473px #FFF , 983px 701px #FFF , 467px 190px #FFF , 67px 140px #FFF , 1384px 356px #FFF , 85px 487px #FFF , 1698px 1139px #FFF , 1752px 1890px #FFF , 819px 984px #FFF , 1814px 1479px #FFF , 1246px 750px #FFF , 1330px 1949px #FFF , 218px 1357px #FFF , 1610px 1911px #FFF , 253px 375px #FFF , 1653px 134px #FFF , 1819px 360px #FFF , 694px 1419px #FFF , 1147px 1343px #FFF , 1441px 510px #FFF , 68px 561px #FFF , 570px 551px #FFF , 888px 826px #FFF , 1870px 503px #FFF , 495px 1582px #FFF , 1762px 278px #FFF , 818px 1812px #FFF , 1971px 593px #FFF , 332px 512px #FFF , 1987px 337px #FFF , 1944px 1380px #FFF , 568px 449px #FFF , 1529px 717px #FFF , 140px 1166px #FFF , 1181px 1515px #FFF , 524px 805px #FFF , 1745px 750px #FFF , 92px 1555px #FFF , 646px 994px #FFF , 557px 771px #FFF , 23px 144px #FFF , 831px 1637px #FFF , 553px 466px #FFF , 1477px 574px #FFF , 247px 1621px #FFF , 664px 990px #FFF , 357px 899px #FFF , 962px 1547px #FFF , 1673px 637px #FFF , 776px 1743px #FFF , 1965px 1420px #FFF , 1806px 812px #FFF , 1673px 1943px #FFF , 490px 1912px #FFF , 832px 370px #FFF , 1851px 1000px #FFF , 1051px 1505px #FFF , 685px 904px #FFF , 309px 1726px #FFF , 1259px 1077px #FFF , 1075px 16px #FFF , 1798px 468px #FFF , 1637px 515px #FFF , 1730px 300px #FFF , 392px 1867px #FFF , 150px 754px #FFF , 1657px 419px #FFF , 757px 1225px #FFF , 1852px 1222px #FFF , 59px 891px #FFF , 875px 630px #FFF , 1298px 450px #FFF , 511px 760px #FFF , 1821px 1420px #FFF , 1995px 1930px #FFF , 547px 1305px #FFF , 421px 54px #FFF , 1651px 415px #FFF , 273px 1358px #FFF , 988px 320px #FFF , 1200px 560px #FFF , 808px 723px #FFF , 1544px 1605px #FFF , 1884px 1851px #FFF , 642px 1771px #FFF , 1306px 814px #FFF , 1307px 499px #FFF , 411px 752px #FFF , 976px 932px #FFF , 164px 1861px #FFF , 1842px 529px #FFF , 851px 1820px #FFF , 28px 1732px #FFF , 171px 764px #FFF , 1370px 459px #FFF , 1845px 5px #FFF , 895px 366px #FFF , 1847px 313px #FFF , 1592px 1463px #FFF , 50px 847px #FFF , 1550px 426px #FFF , 1811px 669px #FFF , 1743px 103px #FFF , 1566px 307px #FFF , 577px 351px #FFF , 1817px 1085px #FFF , 433px 194px #FFF , 14px 283px #FFF , 848px 1591px #FFF , 200px 810px #FFF , 526px 1390px #FFF , 897px 1099px #FFF , 265px 532px #FFF , 1431px 1187px #FFF , 475px 1176px #FFF , 1749px 1740px #FFF , 1557px 590px #FFF , 1038px 871px #FFF , 326px 1120px #FFF , 1720px 105px #FFF , 1517px 82px #FFF , 1862px 1081px #FFF , 863px 178px #FFF , 1463px 376px #FFF , 769px 1641px #FFF , 334px 1423px #FFF , 191px 1173px #FFF , 275px 607px #FFF , 322px 1558px #FFF , 998px 1667px #FFF , 1763px 640px #FFF , 453px 1450px #FFF , 993px 192px #FFF , 1715px 1926px #FFF , 685px 29px #FFF , 37px 423px #FFF , 744px 1840px #FFF , 1501px 207px #FFF , 549px 1334px #FFF , 582px 1662px #FFF , 869px 434px #FFF , 1771px 480px #FFF , 994px 141px #FFF , 1840px 92px #FFF , 14px 840px #FFF , 569px 170px #FFF , 1651px 1325px #FFF , 1684px 1575px #FFF , 1164px 893px #FFF , 1648px 1446px #FFF , 336px 1158px #FFF , 869px 1888px #FFF , 977px 1950px #FFF , 1129px 1807px #FFF , 963px 1619px #FFF , 1333px 1285px #FFF , 1312px 130px #FFF , 86px 1415px #FFF , 1489px 1722px #FFF , 1228px 655px #FFF , 111px 1609px #FFF , 1198px 2000px #FFF , 939px 853px #FFF , 436px 898px #FFF , 1890px 1161px #FFF , 1840px 60px #FFF , 877px 1833px #FFF , 1449px 1392px #FFF , 590px 566px #FFF , 1701px 996px #FFF , 892px 1170px #FFF , 1004px 108px #FFF , 664px 710px #FFF , 486px 227px #FFF , 1709px 256px #FFF , 1909px 1727px #FFF , 1280px 1836px #FFF , 1686px 508px #FFF , 742px 1826px #FFF , 1453px 1268px #FFF , 1383px 283px #FFF , 1274px 747px #FFF , 18px 1202px #FFF , 1368px 1588px #FFF , 320px 729px #FFF , 527px 1886px #FFF , 1152px 56px #FFF , 1002px 126px #FFF , 1094px 198px #FFF , 561px 272px #FFF , 1996px 401px #FFF , 1432px 546px #FFF , 466px 414px #FFF , 38px 1904px #FFF , 1653px 1352px #FFF , 849px 74px #FFF , 350px 762px #FFF , 1162px 665px #FFF , 335px 1027px #FFF , 100px 156px #FFF , 402px 1843px #FFF , 1420px 1408px #FFF , 378px 904px #FFF , 426px 1653px #FFF , 38px 1116px #FFF , 89px 1376px #FFF , 1677px 1184px #FFF , 1892px 1558px #FFF , 1895px 862px #FFF , 1728px 1327px #FFF , 1277px 143px #FFF , 720px 1441px #FFF , 1995px 774px #FFF , 687px 692px #FFF , 111px 89px #FFF , 554px 746px #FFF , 1414px 608px #FFF , 998px 329px #FFF , 1528px 1967px #FFF , 183px 1529px #FFF , 491px 1743px #FFF , 693px 1987px #FFF , 1830px 1672px #FFF , 1631px 557px #FFF , 1269px 1461px #FFF , 1522px 905px #FFF , 1283px 477px #FFF , 744px 816px #FFF , 1910px 26px #FFF , 439px 13px #FFF , 45px 495px #FFF , 5px 1723px #FFF , 519px 1138px #FFF , 729px 12px #FFF , 286px 1850px #FFF , 597px 1056px #FFF , 1224px 1077px #FFF , 1601px 988px #FFF , 859px 1454px #FFF , 285px 1752px #FFF , 1343px 50px #FFF , 866px 911px #FFF , 1133px 508px #FFF , 217px 949px #FFF , 326px 140px #FFF , 188px 1995px #FFF , 1920px 1595px #FFF , 534px 1215px #FFF , 300px 1107px #FFF , 514px 1181px #FFF , 1400px 670px #FFF , 1346px 541px #FFF , 526px 214px #FFF , 1845px 1699px #FFF , 323px 871px #FFF , 185px 1253px #FFF , 1022px 1950px #FFF , 177px 1460px #FFF , 456px 1021px #FFF , 1533px 40px #FFF , 1359px 604px #FFF , 1048px 496px #FFF , 1578px 1370px #FFF , 1344px 1255px #FFF , 1664px 1196px #FFF , 1989px 702px #FFF , 1519px 851px #FFF , 1860px 40px #FFF , 572px 1313px #FFF , 1284px 1655px #FFF , 150px 16px #FFF , 819px 820px #FFF , 1757px 842px #FFF , 1146px 1508px #FFF , 1577px 1243px #FFF , 426px 1738px #FFF , 1892px 1899px #FFF , 654px 463px #FFF , 1961px 1509px #FFF , 812px 359px #FFF , 75px 1567px #FFF , 368px 122px #FFF , 346px 1411px #FFF , 769px 646px #FFF , 395px 1010px #FFF , 851px 1888px #FFF , 1132px 1148px #FFF , 1715px 1059px #FFF , 1367px 1607px #FFF , 228px 976px #FFF , 488px 806px #FFF , 791px 1873px #FFF , 1197px 55px #FFF , 1931px 1134px #FFF , 106px 495px #FFF , 593px 1508px #FFF , 316px 568px #FFF , 1121px 255px #FFF , 1248px 747px #FFF , 1683px 1092px #FFF , 1017px 1638px #FFF , 1434px 766px #FFF , 897px 1119px #FFF , 1505px 1410px #FFF , 130px 1853px #FFF , 1038px 1840px #FFF , 640px 1887px #FFF , 1016px 1241px #FFF , 1211px 112px #FFF , 1538px 1627px #FFF , 1166px 1582px #FFF , 533px 295px #FFF , 1219px 1703px #FFF , 1621px 1483px #FFF , 512px 1392px #FFF , 1201px 14px #FFF , 197px 658px #FFF , 1504px 1232px #FFF , 1956px 1401px #FFF , 1231px 1783px #FFF , 407px 892px #FFF , 655px 703px #FFF , 1077px 812px #FFF , 1236px 611px #FFF , 1069px 1073px #FFF , 1666px 639px #FFF , 312px 1548px #FFF , 1764px 895px #FFF , 268px 1697px #FFF , 1740px 864px #FFF , 1533px 430px #FFF , 571px 1605px #FFF , 1491px 1546px #FFF , 1886px 239px #FFF , 498px 1854px #FFF , 1871px 801px #FFF , 201px 1407px #FFF , 408px 277px #FFF , 1886px 1464px #FFF , 451px 1177px #FFF , 617px 1712px #FFF , 769px 300px #FFF , 547px 600px #FFF , 576px 1551px #FFF , 200px 1011px #FFF , 171px 1554px #FFF , 397px 1984px #FFF , 1074px 1825px #FFF , 1491px 3px #FFF , 1082px 1497px #FFF , 1991px 916px #FFF , 1089px 334px #FFF , 1020px 105px #FFF , 1846px 1016px #FFF , 833px 1402px #FFF , 1186px 1026px #FFF , 1911px 720px #FFF , 396px 416px #FFF , 1181px 1590px #FFF , 1947px 528px #FFF , 1960px 646px #FFF , 689px 1468px #FFF , 1282px 1966px #FFF , 1841px 1358px #FFF , 661px 1251px #FFF , 1681px 1656px #FFF , 1004px 1153px #FFF , 202px 425px #FFF , 1515px 1727px #FFF , 1011px 330px #FFF , 353px 1562px #FFF , 469px 1482px #FFF , 1995px 1032px #FFF , 1776px 1199px #FFF , 1539px 272px #FFF , 230px 968px #FFF , 573px 1078px #FFF , 594px 1382px #FFF , 781px 130px #FFF , 1859px 200px #FFF , 1949px 353px #FFF , 482px 1708px #FFF , 494px 1749px #FFF , 1123px 525px #FFF , 1507px 1312px #FFF , 431px 1408px #FFF , 1347px 1980px #FFF , 1391px 557px #FFF , 1824px 770px #FFF , 1908px 1688px #FFF , 1082px 383px #FFF , 717px 1792px #FFF , 1607px 120px #FFF , 1410px 991px #FFF , 698px 1501px #FFF , 677px 733px #FFF , 131px 1449px #FFF , 893px 765px #FFF , 1833px 1157px #FFF , 616px 1364px #FFF , 1748px 77px #FFF , 1429px 1707px #FFF , 684px 505px #FFF , 1195px 1115px #FFF , 863px 797px #FFF , 861px 1448px #FFF , 851px 1946px #FFF , 88px 594px #FFF , 1399px 1511px #FFF , 1224px 1531px #FFF , 172px 576px #FFF , 1118px 670px #FFF , 1314px 1365px #FFF , 1853px 1470px #FFF , 1582px 566px #FFF , 1237px 1633px #FFF , 1537px 1435px #FFF , 1816px 84px #FFF , 242px 1063px #FFF , 370px 158px #FFF , 1608px 1756px #FFF , 1018px 814px #FFF , 1021px 270px #FFF , 1053px 57px #FFF , 1016px 1692px #FFF , 116px 198px #FFF , 1843px 181px #FFF , 1651px 806px #FFF , 1579px 960px #FFF , 1267px 1327px #FFF , 1402px 1518px #FFF , 45px 187px #FFF , 184px 1598px #FFF , 268px 454px #FFF , 1641px 809px #FFF , 605px 1953px #FFF , 1965px 1591px #FFF , 386px 1785px #FFF , 1266px 287px #FFF , 104px 333px #FFF , 156px 715px #FFF , 59px 571px #FFF , 1643px 1929px #FFF , 773px 11px #FFF , 957px 1267px #FFF , 1348px 1584px #FFF , 58px 682px #FFF , 598px 814px #FFF , 87px 528px #FFF , 1296px 136px #FFF , 494px 1106px #FFF , 131px 1226px #FFF , 123px 900px #FFF , 497px 1145px #FFF , 1936px 1070px #FFF , 1400px 559px #FFF , 65px 365px #FFF , 1359px 1838px #FFF , 1311px 1014px #FFF , 589px 1601px #FFF , 372px 970px #FFF , 1186px 1893px #FFF , 1901px 98px #FFF , 1246px 1407px #FFF , 673px 1131px #FFF , 1481px 1684px #FFF , 1619px 1019px #FFF , 379px 1614px #FFF , 1668px 1027px #FFF , 646px 582px #FFF , 1958px 1706px #FFF , 357px 952px #FFF , 1969px 173px #FFF , 1903px 1374px #FFF , 64px 1887px #FFF , 1294px 393px #FFF , 1269px 364px #FFF , 1562px 1563px #FFF , 163px 743px #FFF , 1711px 1076px #FFF , 689px 1055px #FFF , 644px 1193px #FFF , 1293px 704px #FFF , 723px 1800px #FFF , 438px 605px #FFF , 1453px 601px #FFF , 1828px 1655px #FFF , 677px 454px #FFF , 1817px 1086px #FFF , 781px 421px #FFF , 706px 1023px #FFF , 1342px 833px #FFF , 1389px 1875px #FFF , 1611px 407px #FFF , 91px 349px #FFF , 1536px 278px #FFF , 203px 1246px #FFF , 726px 1426px #FFF , 396px 567px #FFF , 88px 920px #FFF , 390px 1492px #FFF , 97px 1041px #FFF , 1269px 1046px #FFF , 639px 1471px #FFF , 792px 232px #FFF , 76px 968px #FFF , 968px 913px #FFF , 1907px 1340px #FFF , 825px 1951px #FFF , 997px 1988px #FFF , 1207px 1169px #FFF , 692px 1927px #FFF , 626px 631px #FFF , 931px 1330px #FFF , 784px 17px #FFF , 1878px 1636px #FFF , 806px 698px #FFF , 1089px 1338px #FFF , 961px 1053px #FFF , 1514px 122px #FFF , 1240px 796px #FFF , 1357px 275px #FFF , 1913px 490px #FFF , 868px 100px #FFF , 816px 283px #FFF , 1655px 1088px #FFF , 698px 1093px #FFF , 711px 567px #FFF , 156px 1855px #FFF;
+  animation: animStar 50s linear infinite;
+}
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 5000px;/*iso 2000*/
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 31px 352px #e50404, 802px 682px #e50404, 1571px 770px #e50404, 618px 578px #e50404, 13px 696px #FFF , 1597px 439px #FFF , 1455px 621px #FFF , 1545px 1475px #FFF , 1316px 1417px #FFF , 611px 1234px #FFF , 1903px 30px #FFF , 343px 1999px #FFF , 601px 1941px #FFF , 892px 218px #FFF , 1231px 481px #FFF , 1711px 735px #FFF , 725px 717px #FFF , 1578px 1371px #FFF , 23px 731px #FFF , 1936px 1557px #FFF , 849px 650px #FFF , 577px 166px #FFF , 1102px 1789px #FFF , 306px 1162px #FFF , 1594px 1267px #FFF , 313px 1563px #FFF , 1905px 953px #FFF , 77px 351px #FFF , 1646px 763px #FFF , 731px 398px #FFF , 1195px 1189px #FFF , 1439px 642px #FFF , 1192px 1873px #FFF , 1137px 1136px #FFF , 889px 415px #FFF , 357px 1564px #FFF , 698px 1087px #FFF , 822px 768px #FFF , 1205px 926px #FFF , 1053px 244px #FFF , 1056px 1686px #FFF , 1041px 1957px #FFF , 842px 346px #FFF , 896px 1523px #FFF , 579px 1027px #FFF , 902px 1017px #FFF , 1129px 124px #FFF , 1662px 1311px #FFF , 942px 1735px #FFF , 858px 1509px #FFF , 1647px 721px #FFF , 1455px 1926px #FFF , 839px 1858px #FFF , 1911px 704px #FFF , 1158px 1914px #FFF , 625px 1390px #FFF , 1938px 1467px #FFF , 792px 1153px #FFF , 1892px 1993px #FFF , 650px 31px #FFF , 950px 613px #FFF , 19px 1470px #FFF , 1668px 29px #FFF , 423px 1261px #FFF , 1692px 462px #FFF , 66px 235px #FFF , 1094px 692px #FFF , 427px 548px #FFF , 1785px 698px #FFF , 230px 1637px #FFF , 1363px 1301px #FFF , 635px 1881px #FFF , 1863px 103px #FFF , 984px 434px #FFF , 218px 628px #FFF , 1308px 252px #FFF , 682px 1344px #FFF , 627px 1775px #FFF , 1642px 350px #FFF , 113px 970px #FFF , 41px 851px #FFF , 1222px 739px #FFF , 1530px 1773px #FFF , 1679px 1703px #FFF , 1856px 1778px #FFF , 813px 1175px #FFF , 1322px 734px #FFF , 1462px 353px #FFF , 1953px 54px #FFF , 1167px 1036px #FFF , 676px 391px #FFF , 633px 1164px #FFF , 872px 464px #FFF , 840px 1073px #FFF , 1717px 659px #FFF , 1618px 891px #FFF , 331px 215px #FFF , 1136px 150px #FFF , 580px 1948px #FFF , 848px 1969px #FFF , 960px 1066px #FFF , 215px 657px #FFF , 787px 654px #FFF , 1192px 1375px #FFF , 1966px 190px #FFF , 996px 153px #FFF , 3px 843px #FFF , 337px 941px #FFF , 1760px 867px #FFF , 1089px 1630px #FFF , 672px 1823px #FFF , 1202px 1343px #FFF , 1986px 263px #FFF , 209px 617px #FFF , 1186px 1049px #FFF , 244px 1586px #FFF , 1941px 754px #FFF , 1695px 632px #FFF , 1545px 1673px #FFF , 1071px 494px #FFF , 1540px 973px #FFF , 1785px 1250px #FFF , 185px 88px #FFF , 406px 1801px #FFF , 1348px 627px #FFF , 542px 1327px #FFF , 221px 1046px #FFF , 1396px 469px #FFF , 1655px 1121px #FFF , 712px 626px #FFF , 521px 1520px #FFF , 1755px 449px #FFF , 119px 511px #FFF , 992px 1717px #FFF , 405px 693px #FFF , 1293px 79px #FFF , 250px 1376px #FFF , 667px 1573px #FFF , 1px 645px #FFF , 1643px 438px #FFF , 521px 920px #FFF , 527px 1856px #FFF , 331px 10px #FFF , 1078px 809px #FFF , 1431px 881px #FFF , 1530px 1852px #FFF , 1742px 456px #FFF , 1279px 1382px #FFF , 1468px 759px #FFF , 1418px 72px #FFF , 1560px 1828px #FFF , 1567px 1271px #FFF , 1868px 1681px #FFF , 839px 1048px #FFF , 1737px 551px #FFF , 688px 444px #FFF , 1197px 1848px #FFF , 349px 234px #FFF , 1425px 1734px #FFF , 1361px 396px #FFF , 197px 24px #FFF , 401px 1422px #FFF , 1618px 1922px #FFF , 956px 139px #FFF , 1806px 102px #FFF , 560px 819px #FFF , 57px 159px #FFF , 1490px 659px #FFF , 935px 323px #FFF , 197px 1713px #FFF , 63px 1441px #FFF , 522px 1473px #FFF , 983px 701px #FFF , 467px 190px #FFF , 67px 140px #FFF , 1384px 356px #FFF , 85px 487px #FFF , 1698px 1139px #FFF , 1752px 1890px #FFF , 819px 984px #FFF , 1814px 1479px #FFF , 1246px 750px #FFF , 1330px 1949px #FFF , 218px 1357px #FFF , 1610px 1911px #FFF , 253px 375px #FFF , 1653px 134px #FFF , 1819px 360px #FFF , 694px 1419px #FFF , 1147px 1343px #FFF , 1441px 510px #FFF , 68px 561px #FFF , 570px 551px #FFF , 888px 826px #FFF , 1870px 503px #FFF , 495px 1582px #FFF , 1762px 278px #FFF , 818px 1812px #FFF , 1971px 593px #FFF , 332px 512px #FFF , 1987px 337px #FFF , 1944px 1380px #FFF , 568px 449px #FFF , 1529px 717px #FFF , 140px 1166px #FFF , 1181px 1515px #FFF , 524px 805px #FFF , 1745px 750px #FFF , 92px 1555px #FFF , 646px 994px #FFF , 557px 771px #FFF , 23px 144px #FFF , 831px 1637px #FFF , 553px 466px #FFF , 1477px 574px #FFF , 247px 1621px #FFF , 664px 990px #FFF , 357px 899px #FFF , 962px 1547px #FFF , 1673px 637px #FFF , 776px 1743px #FFF , 1965px 1420px #FFF , 1806px 812px #FFF , 1673px 1943px #FFF , 490px 1912px #FFF , 832px 370px #FFF , 1851px 1000px #FFF , 1051px 1505px #FFF , 685px 904px #FFF , 309px 1726px #FFF , 1259px 1077px #FFF , 1075px 16px #FFF , 1798px 468px #FFF , 1637px 515px #FFF , 1730px 300px #FFF , 392px 1867px #FFF , 150px 754px #FFF , 1657px 419px #FFF , 757px 1225px #FFF , 1852px 1222px #FFF , 59px 891px #FFF , 875px 630px #FFF , 1298px 450px #FFF , 511px 760px #FFF , 1821px 1420px #FFF , 1995px 1930px #FFF , 547px 1305px #FFF , 421px 54px #FFF , 1651px 415px #FFF , 273px 1358px #FFF , 988px 320px #FFF , 1200px 560px #FFF , 808px 723px #FFF , 1544px 1605px #FFF , 1884px 1851px #FFF , 642px 1771px #FFF , 1306px 814px #FFF , 1307px 499px #FFF , 411px 752px #FFF , 976px 932px #FFF , 164px 1861px #FFF , 1842px 529px #FFF , 851px 1820px #FFF , 28px 1732px #FFF , 171px 764px #FFF , 1370px 459px #FFF , 1845px 5px #FFF , 895px 366px #FFF , 1847px 313px #FFF , 1592px 1463px #FFF , 50px 847px #FFF , 1550px 426px #FFF , 1811px 669px #FFF , 1743px 103px #FFF , 1566px 307px #FFF , 577px 351px #FFF , 1817px 1085px #FFF , 433px 194px #FFF , 14px 283px #FFF , 848px 1591px #FFF , 200px 810px #FFF , 526px 1390px #FFF , 897px 1099px #FFF , 265px 532px #FFF , 1431px 1187px #FFF , 475px 1176px #FFF , 1749px 1740px #FFF , 1557px 590px #FFF , 1038px 871px #FFF , 326px 1120px #FFF , 1720px 105px #FFF , 1517px 82px #FFF , 1862px 1081px #FFF , 863px 178px #FFF , 1463px 376px #FFF , 769px 1641px #FFF , 334px 1423px #FFF , 191px 1173px #FFF , 275px 607px #FFF , 322px 1558px #FFF , 998px 1667px #FFF , 1763px 640px #FFF , 453px 1450px #FFF , 993px 192px #FFF , 1715px 1926px #FFF , 685px 29px #FFF , 37px 423px #FFF , 744px 1840px #FFF , 1501px 207px #FFF , 549px 1334px #FFF , 582px 1662px #FFF , 869px 434px #FFF , 1771px 480px #FFF , 994px 141px #FFF , 1840px 92px #FFF , 14px 840px #FFF , 569px 170px #FFF , 1651px 1325px #FFF , 1684px 1575px #FFF , 1164px 893px #FFF , 1648px 1446px #FFF , 336px 1158px #FFF , 869px 1888px #FFF , 977px 1950px #FFF , 1129px 1807px #FFF , 963px 1619px #FFF , 1333px 1285px #FFF , 1312px 130px #FFF , 86px 1415px #FFF , 1489px 1722px #FFF , 1228px 655px #FFF , 111px 1609px #FFF , 1198px 2000px #FFF , 939px 853px #FFF , 436px 898px #FFF , 1890px 1161px #FFF , 1840px 60px #FFF , 877px 1833px #FFF , 1449px 1392px #FFF , 590px 566px #FFF , 1701px 996px #FFF , 892px 1170px #FFF , 1004px 108px #FFF , 664px 710px #FFF , 486px 227px #FFF , 1709px 256px #FFF , 1909px 1727px #FFF , 1280px 1836px #FFF , 1686px 508px #FFF , 742px 1826px #FFF , 1453px 1268px #FFF , 1383px 283px #FFF , 1274px 747px #FFF , 18px 1202px #FFF , 1368px 1588px #FFF , 320px 729px #FFF , 527px 1886px #FFF , 1152px 56px #FFF , 1002px 126px #FFF , 1094px 198px #FFF , 561px 272px #FFF , 1996px 401px #FFF , 1432px 546px #FFF , 466px 414px #FFF , 38px 1904px #FFF , 1653px 1352px #FFF , 849px 74px #FFF , 350px 762px #FFF , 1162px 665px #FFF , 335px 1027px #FFF , 100px 156px #FFF , 402px 1843px #FFF , 1420px 1408px #FFF , 378px 904px #FFF , 426px 1653px #FFF , 38px 1116px #FFF , 89px 1376px #FFF , 1677px 1184px #FFF , 1892px 1558px #FFF , 1895px 862px #FFF , 1728px 1327px #FFF , 1277px 143px #FFF , 720px 1441px #FFF , 1995px 774px #FFF , 687px 692px #FFF , 111px 89px #FFF , 554px 746px #FFF , 1414px 608px #FFF , 998px 329px #FFF , 1528px 1967px #FFF , 183px 1529px #FFF , 491px 1743px #FFF , 693px 1987px #FFF , 1830px 1672px #FFF , 1631px 557px #FFF , 1269px 1461px #FFF , 1522px 905px #FFF , 1283px 477px #FFF , 744px 816px #FFF , 1910px 26px #FFF , 439px 13px #FFF , 45px 495px #FFF , 5px 1723px #FFF , 519px 1138px #FFF , 729px 12px #FFF , 286px 1850px #FFF , 597px 1056px #FFF , 1224px 1077px #FFF , 1601px 988px #FFF , 859px 1454px #FFF , 285px 1752px #FFF , 1343px 50px #FFF , 866px 911px #FFF , 1133px 508px #FFF , 217px 949px #FFF , 326px 140px #FFF , 188px 1995px #FFF , 1920px 1595px #FFF , 534px 1215px #FFF , 300px 1107px #FFF , 514px 1181px #FFF , 1400px 670px #FFF , 1346px 541px #FFF , 526px 214px #FFF , 1845px 1699px #FFF , 323px 871px #FFF , 185px 1253px #FFF , 1022px 1950px #FFF , 177px 1460px #FFF , 456px 1021px #FFF , 1533px 40px #FFF , 1359px 604px #FFF , 1048px 496px #FFF , 1578px 1370px #FFF , 1344px 1255px #FFF , 1664px 1196px #FFF , 1989px 702px #FFF , 1519px 851px #FFF , 1860px 40px #FFF , 572px 1313px #FFF , 1284px 1655px #FFF , 150px 16px #FFF , 819px 820px #FFF , 1757px 842px #FFF , 1146px 1508px #FFF , 1577px 1243px #FFF , 426px 1738px #FFF , 1892px 1899px #FFF , 654px 463px #FFF , 1961px 1509px #FFF , 812px 359px #FFF , 75px 1567px #FFF , 368px 122px #FFF , 346px 1411px #FFF , 769px 646px #FFF , 395px 1010px #FFF , 851px 1888px #FFF , 1132px 1148px #FFF , 1715px 1059px #FFF , 1367px 1607px #FFF , 228px 976px #FFF , 488px 806px #FFF , 791px 1873px #FFF , 1197px 55px #FFF , 1931px 1134px #FFF , 106px 495px #FFF , 593px 1508px #FFF , 316px 568px #FFF , 1121px 255px #FFF , 1248px 747px #FFF , 1683px 1092px #FFF , 1017px 1638px #FFF , 1434px 766px #FFF , 897px 1119px #FFF , 1505px 1410px #FFF , 130px 1853px #FFF , 1038px 1840px #FFF , 640px 1887px #FFF , 1016px 1241px #FFF , 1211px 112px #FFF , 1538px 1627px #FFF , 1166px 1582px #FFF , 533px 295px #FFF , 1219px 1703px #FFF , 1621px 1483px #FFF , 512px 1392px #FFF , 1201px 14px #FFF , 197px 658px #FFF , 1504px 1232px #FFF , 1956px 1401px #FFF , 1231px 1783px #FFF , 407px 892px #FFF , 655px 703px #FFF , 1077px 812px #FFF , 1236px 611px #FFF , 1069px 1073px #FFF , 1666px 639px #FFF , 312px 1548px #FFF , 1764px 895px #FFF , 268px 1697px #FFF , 1740px 864px #FFF , 1533px 430px #FFF , 571px 1605px #FFF , 1491px 1546px #FFF , 1886px 239px #FFF , 498px 1854px #FFF , 1871px 801px #FFF , 201px 1407px #FFF , 408px 277px #FFF , 1886px 1464px #FFF , 451px 1177px #FFF , 617px 1712px #FFF , 769px 300px #FFF , 547px 600px #FFF , 576px 1551px #FFF , 200px 1011px #FFF , 171px 1554px #FFF , 397px 1984px #FFF , 1074px 1825px #FFF , 1491px 3px #FFF , 1082px 1497px #FFF , 1991px 916px #FFF , 1089px 334px #FFF , 1020px 105px #FFF , 1846px 1016px #FFF , 833px 1402px #FFF , 1186px 1026px #FFF , 1911px 720px #FFF , 396px 416px #FFF , 1181px 1590px #FFF , 1947px 528px #FFF , 1960px 646px #FFF , 689px 1468px #FFF , 1282px 1966px #FFF , 1841px 1358px #FFF , 661px 1251px #FFF , 1681px 1656px #FFF , 1004px 1153px #FFF , 202px 425px #FFF , 1515px 1727px #FFF , 1011px 330px #FFF , 353px 1562px #FFF , 469px 1482px #FFF , 1995px 1032px #FFF , 1776px 1199px #FFF , 1539px 272px #FFF , 230px 968px #FFF , 573px 1078px #FFF , 594px 1382px #FFF , 781px 130px #FFF , 1859px 200px #FFF , 1949px 353px #FFF , 482px 1708px #FFF , 494px 1749px #FFF , 1123px 525px #FFF , 1507px 1312px #FFF , 431px 1408px #FFF , 1347px 1980px #FFF , 1391px 557px #FFF , 1824px 770px #FFF , 1908px 1688px #FFF , 1082px 383px #FFF , 717px 1792px #FFF , 1607px 120px #FFF , 1410px 991px #FFF , 698px 1501px #FFF , 677px 733px #FFF , 131px 1449px #FFF , 893px 765px #FFF , 1833px 1157px #FFF , 616px 1364px #FFF , 1748px 77px #FFF , 1429px 1707px #FFF , 684px 505px #FFF , 1195px 1115px #FFF , 863px 797px #FFF , 861px 1448px #FFF , 851px 1946px #FFF , 88px 594px #FFF , 1399px 1511px #FFF , 1224px 1531px #FFF , 172px 576px #FFF , 1118px 670px #FFF , 1314px 1365px #FFF , 1853px 1470px #FFF , 1582px 566px #FFF , 1237px 1633px #FFF , 1537px 1435px #FFF , 1816px 84px #FFF , 242px 1063px #FFF , 370px 158px #FFF , 1608px 1756px #FFF , 1018px 814px #FFF , 1021px 270px #FFF , 1053px 57px #FFF , 1016px 1692px #FFF , 116px 198px #FFF , 1843px 181px #FFF , 1651px 806px #FFF , 1579px 960px #FFF , 1267px 1327px #FFF , 1402px 1518px #FFF , 45px 187px #FFF , 184px 1598px #FFF , 268px 454px #FFF , 1641px 809px #FFF , 605px 1953px #FFF , 1965px 1591px #FFF , 386px 1785px #FFF , 1266px 287px #FFF , 104px 333px #FFF , 156px 715px #FFF , 59px 571px #FFF , 1643px 1929px #FFF , 773px 11px #FFF , 957px 1267px #FFF , 1348px 1584px #FFF , 58px 682px #FFF , 598px 814px #FFF , 87px 528px #FFF , 1296px 136px #FFF , 494px 1106px #FFF , 131px 1226px #FFF , 123px 900px #FFF , 497px 1145px #FFF , 1936px 1070px #FFF , 1400px 559px #FFF , 65px 365px #FFF , 1359px 1838px #FFF , 1311px 1014px #FFF , 589px 1601px #FFF , 372px 970px #FFF , 1186px 1893px #FFF , 1901px 98px #FFF , 1246px 1407px #FFF , 673px 1131px #FFF , 1481px 1684px #FFF , 1619px 1019px #FFF , 379px 1614px #FFF , 1668px 1027px #FFF , 646px 582px #FFF , 1958px 1706px #FFF , 357px 952px #FFF , 1969px 173px #FFF , 1903px 1374px #FFF , 64px 1887px #FFF , 1294px 393px #FFF , 1269px 364px #FFF , 1562px 1563px #FFF , 163px 743px #FFF , 1711px 1076px #FFF , 689px 1055px #FFF , 644px 1193px #FFF , 1293px 704px #FFF , 723px 1800px #FFF , 438px 605px #FFF , 1453px 601px #FFF , 1828px 1655px #FFF , 677px 454px #FFF , 1817px 1086px #FFF , 781px 421px #FFF , 706px 1023px #FFF , 1342px 833px #FFF , 1389px 1875px #FFF , 1611px 407px #FFF , 91px 349px #FFF , 1536px 278px #FFF , 203px 1246px #FFF , 726px 1426px #FFF , 396px 567px #FFF , 88px 920px #FFF , 390px 1492px #FFF , 97px 1041px #FFF , 1269px 1046px #FFF , 639px 1471px #FFF , 792px 232px #FFF , 76px 968px #FFF , 968px 913px #FFF , 1907px 1340px #FFF , 825px 1951px #FFF , 997px 1988px #FFF , 1207px 1169px #FFF , 692px 1927px #FFF , 626px 631px #FFF , 931px 1330px #FFF , 784px 17px #FFF , 1878px 1636px #FFF , 806px 698px #FFF , 1089px 1338px #FFF , 961px 1053px #FFF , 1514px 122px #FFF , 1240px 796px #FFF , 1357px 275px #FFF , 1913px 490px #FFF , 868px 100px #FFF , 816px 283px #FFF , 1655px 1088px #FFF , 698px 1093px #FFF , 711px 567px #FFF , 156px 1855px #FFF;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 784px 1407px #e50404, 735px 416px #e50404, 1225px 427px #e50404, 693px 76px #e50404, 41px 1069px #FFF , 1175px 115px #FFF , 303px 1760px #FFF , 1354px 790px #FFF , 199px 475px #FFF , 1429px 1538px #FFF , 465px 1577px #FFF , 935px 372px #FFF , 1223px 1025px #FFF , 893px 1996px #FFF , 1022px 1897px #FFF , 758px 482px #FFF , 1316px 476px #FFF , 1222px 1817px #FFF , 602px 575px #FFF , 1670px 875px #FFF , 1908px 506px #FFF , 1402px 1384px #FFF , 1224px 1137px #FFF , 36px 1572px #FFF , 1272px 52px #FFF , 601px 278px #FFF , 1791px 1491px #FFF , 1948px 1496px #FFF , 1851px 1799px #FFF , 884px 1442px #FFF , 1229px 1209px #FFF , 1164px 155px #FFF , 355px 1495px #FFF , 1995px 218px #FFF , 478px 1164px #FFF , 902px 1771px #FFF , 1007px 1697px #FFF , 327px 599px #FFF , 1072px 61px #FFF , 961px 1607px #FFF , 1333px 1381px #FFF , 1701px 1301px #FFF , 652px 718px #FFF , 817px 833px #FFF , 1618px 1481px #FFF , 1196px 1196px #FFF , 1828px 1630px #FFF , 1766px 1447px #FFF , 1894px 272px #FFF , 752px 1819px #FFF , 1389px 486px #FFF , 508px 397px #FFF , 1554px 1308px #FFF , 1638px 1127px #FFF , 1625px 112px #FFF , 1757px 1322px #FFF , 395px 537px #FFF , 18px 376px #FFF , 1945px 516px #FFF , 1286px 1943px #FFF , 1276px 313px #FFF , 1286px 1455px #FFF , 859px 1703px #FFF , 1721px 1634px #FFF , 1451px 420px #FFF , 1265px 1370px #FFF , 1637px 147px #FFF , 1659px 1319px #FFF , 451px 1879px #FFF , 232px 1631px #FFF , 1228px 1967px #FFF , 961px 1985px #FFF , 524px 1349px #FFF , 1629px 750px #FFF , 4px 960px #FFF , 1687px 402px #FFF , 1979px 655px #FFF , 1584px 450px #FFF , 754px 659px #FFF , 1481px 1379px #FFF , 1468px 1340px #FFF , 1958px 629px #FFF , 349px 936px #FFF , 12px 570px #FFF , 1140px 1388px #FFF , 962px 1803px #FFF , 641px 1709px #FFF , 824px 1546px #FFF , 899px 12px #FFF , 1615px 1928px #FFF , 1248px 1966px #FFF , 650px 1218px #FFF , 29px 971px #FFF , 1213px 1135px #FFF , 902px 1995px #FFF , 199px 1560px #FFF , 900px 984px #FFF , 1416px 1933px #FFF , 423px 1731px #FFF , 1158px 479px #FFF , 266px 1493px #FFF , 694px 286px #FFF , 1826px 24px #FFF , 1913px 555px #FFF , 249px 1858px #FFF , 289px 1882px #FFF , 1162px 1453px #FFF , 1567px 1103px #FFF , 1628px 467px #FFF , 44px 1810px #FFF , 895px 1768px #FFF , 913px 962px #FFF , 708px 48px #FFF , 155px 367px #FFF , 1086px 1101px #FFF , 412px 1288px #FFF , 781px 188px #FFF , 1248px 1355px #FFF , 1461px 873px #FFF , 1404px 304px #FFF , 1605px 528px #FFF , 781px 681px #FFF , 1634px 1209px #FFF , 1848px 1749px #FFF , 313px 439px #FFF , 1619px 655px #FFF , 1196px 444px #FFF , 1141px 1901px #FFF , 345px 789px #FFF , 728px 990px #FFF , 18px 1195px #FFF , 135px 129px #FFF , 57px 1825px #FFF , 942px 1373px #FFF , 199px 1244px #FFF , 789px 1933px #FFF , 133px 1035px #FFF , 1240px 263px #FFF , 1471px 364px #FFF , 1380px 246px #FFF , 1745px 75px #FFF , 1610px 1243px #FFF , 1565px 631px #FFF , 1780px 589px #FFF , 1800px 702px #FFF , 1345px 552px #FFF , 1956px 155px #FFF , 254px 1338px #FFF , 1326px 1800px #FFF , 89px 3px #FFF , 1272px 1734px #FFF , 1396px 856px #FFF , 1464px 1332px #FFF , 539px 1066px #FFF , 1982px 210px #FFF , 478px 1668px #FFF , 1508px 1243px #FFF , 1775px 1331px #FFF , 291px 937px #FFF , 862px 1669px #FFF , 1179px 1611px #FFF , 95px 823px #FFF , 1120px 1444px #FFF , 838px 126px #FFF , 391px 1687px #FFF , 662px 322px #FFF , 1727px 435px #FFF , 1628px 1468px #FFF , 1692px 1581px #FFF , 920px 1250px #FFF , 270px 1531px #FFF , 1417px 1115px #FFF , 1802px 1804px #FFF , 816px 655px #FFF , 1731px 272px #FFF , 1988px 881px #FFF , 640px 1332px #FFF , 1747px 1149px #FFF , 651px 550px #FFF , 1155px 1831px #FFF , 1930px 1620px #FFF , 1967px 19px #FFF , 544px 701px #FFF , 1135px 1075px #FFF , 1037px 1936px #FFF , 926px 1562px #FFF , 668px 490px #FFF , 1434px 303px #FFF , 68px 304px #FFF , 425px 761px #FFF , 1218px 632px #FFF , 285px 1225px #FFF , 432px 1931px #FFF , 1898px 153px #FFF , 1140px 1182px #FFF , 1347px 740px #FFF , 496px 484px #FFF , 1060px 1778px #FFF , 739px 1564px #FFF , 717px 1331px #FFF;
+  animation: animStar 100s linear infinite;
+}
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 784px 1407px #e50404, 735px 416px #e50404, 1225px 427px #e50404, 693px 76px #e50404, 41px 1069px #FFF , 1175px 115px #FFF , 303px 1760px #FFF , 1354px 790px #FFF , 199px 475px #FFF , 1429px 1538px #FFF , 465px 1577px #FFF , 935px 372px #FFF , 1223px 1025px #FFF , 893px 1996px #FFF , 1022px 1897px #FFF , 758px 482px #FFF , 1316px 476px #FFF , 1222px 1817px #FFF , 602px 575px #FFF , 1670px 875px #FFF , 1908px 506px #FFF , 1402px 1384px #FFF , 1224px 1137px #FFF , 36px 1572px #FFF , 1272px 52px #FFF , 601px 278px #FFF , 1791px 1491px #FFF , 1948px 1496px #FFF , 1851px 1799px #FFF , 884px 1442px #FFF , 1229px 1209px #FFF , 1164px 155px #FFF , 355px 1495px #FFF , 1995px 218px #FFF , 478px 1164px #FFF , 902px 1771px #FFF , 1007px 1697px #FFF , 327px 599px #FFF , 1072px 61px #FFF , 961px 1607px #FFF , 1333px 1381px #FFF , 1701px 1301px #FFF , 652px 718px #FFF , 817px 833px #FFF , 1618px 1481px #FFF , 1196px 1196px #FFF , 1828px 1630px #FFF , 1766px 1447px #FFF , 1894px 272px #FFF , 752px 1819px #FFF , 1389px 486px #FFF , 508px 397px #FFF , 1554px 1308px #FFF , 1638px 1127px #FFF , 1625px 112px #FFF , 1757px 1322px #FFF , 395px 537px #FFF , 18px 376px #FFF , 1945px 516px #FFF , 1286px 1943px #FFF , 1276px 313px #FFF , 1286px 1455px #FFF , 859px 1703px #FFF , 1721px 1634px #FFF , 1451px 420px #FFF , 1265px 1370px #FFF , 1637px 147px #FFF , 1659px 1319px #FFF , 451px 1879px #FFF , 232px 1631px #FFF , 1228px 1967px #FFF , 961px 1985px #FFF , 524px 1349px #FFF , 1629px 750px #FFF , 4px 960px #FFF , 1687px 402px #FFF , 1979px 655px #FFF , 1584px 450px #FFF , 754px 659px #FFF , 1481px 1379px #FFF , 1468px 1340px #FFF , 1958px 629px #FFF , 349px 936px #FFF , 12px 570px #FFF , 1140px 1388px #FFF , 962px 1803px #FFF , 641px 1709px #FFF , 824px 1546px #FFF , 899px 12px #FFF , 1615px 1928px #FFF , 1248px 1966px #FFF , 650px 1218px #FFF , 29px 971px #FFF , 1213px 1135px #FFF , 902px 1995px #FFF , 199px 1560px #FFF , 900px 984px #FFF , 1416px 1933px #FFF , 423px 1731px #FFF , 1158px 479px #FFF , 266px 1493px #FFF , 694px 286px #FFF , 1826px 24px #FFF , 1913px 555px #FFF , 249px 1858px #FFF , 289px 1882px #FFF , 1162px 1453px #FFF , 1567px 1103px #FFF , 1628px 467px #FFF , 44px 1810px #FFF , 895px 1768px #FFF , 913px 962px #FFF , 708px 48px #FFF , 155px 367px #FFF , 1086px 1101px #FFF , 412px 1288px #FFF , 781px 188px #FFF , 1248px 1355px #FFF , 1461px 873px #FFF , 1404px 304px #FFF , 1605px 528px #FFF , 781px 681px #FFF , 1634px 1209px #FFF , 1848px 1749px #FFF , 313px 439px #FFF , 1619px 655px #FFF , 1196px 444px #FFF , 1141px 1901px #FFF , 345px 789px #FFF , 728px 990px #FFF , 18px 1195px #FFF , 135px 129px #FFF , 57px 1825px #FFF , 942px 1373px #FFF , 199px 1244px #FFF , 789px 1933px #FFF , 133px 1035px #FFF , 1240px 263px #FFF , 1471px 364px #FFF , 1380px 246px #FFF , 1745px 75px #FFF , 1610px 1243px #FFF , 1565px 631px #FFF , 1780px 589px #FFF , 1800px 702px #FFF , 1345px 552px #FFF , 1956px 155px #FFF , 254px 1338px #FFF , 1326px 1800px #FFF , 89px 3px #FFF , 1272px 1734px #FFF , 1396px 856px #FFF , 1464px 1332px #FFF , 539px 1066px #FFF , 1982px 210px #FFF , 478px 1668px #FFF , 1508px 1243px #FFF , 1775px 1331px #FFF , 291px 937px #FFF , 862px 1669px #FFF , 1179px 1611px #FFF , 95px 823px #FFF , 1120px 1444px #FFF , 838px 126px #FFF , 391px 1687px #FFF , 662px 322px #FFF , 1727px 435px #FFF , 1628px 1468px #FFF , 1692px 1581px #FFF , 920px 1250px #FFF , 270px 1531px #FFF , 1417px 1115px #FFF , 1802px 1804px #FFF , 816px 655px #FFF , 1731px 272px #FFF , 1988px 881px #FFF , 640px 1332px #FFF , 1747px 1149px #FFF , 651px 550px #FFF , 1155px 1831px #FFF , 1930px 1620px #FFF , 1967px 19px #FFF , 544px 701px #FFF , 1135px 1075px #FFF , 1037px 1936px #FFF , 926px 1562px #FFF , 668px 490px #FFF , 1434px 303px #FFF , 68px 304px #FFF , 425px 761px #FFF , 1218px 632px #FFF , 285px 1225px #FFF , 432px 1931px #FFF , 1898px 153px #FFF , 1140px 1182px #FFF , 1347px 740px #FFF , 496px 484px #FFF , 1060px 1778px #FFF , 739px 1564px #FFF , 717px 1331px #FFF;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 328px 561px #e50404, 419px 1275px #e50404, 1320px 1968px #e50404, 1560px 370px #e50404, 473px 1092px #FFF , 857px 1555px #FFF , 437px 408px #FFF , 1523px 1056px #FFF , 638px 958px #FFF , 1154px 705px #FFF , 1242px 597px #FFF , 1186px 1494px #FFF , 322px 1948px #FFF , 1229px 1326px #FFF , 209px 843px #FFF , 1684px 1236px #FFF , 1343px 1425px #FFF , 329px 781px #FFF , 753px 639px #FFF , 28px 192px #FFF , 200px 1059px #FFF , 1440px 1646px #FFF , 1375px 1104px #FFF , 1893px 1743px #FFF , 529px 581px #FFF , 524px 334px #FFF , 1759px 1417px #FFF , 138px 1061px #FFF , 298px 289px #FFF , 1309px 1681px #FFF , 945px 816px #FFF , 1311px 1818px #FFF , 1013px 49px #FFF , 981px 1145px #FFF , 774px 1461px #FFF , 1890px 1774px #FFF , 762px 132px #FFF , 896px 824px #FFF , 954px 94px #FFF , 207px 399px #FFF , 172px 1624px #FFF , 952px 923px #FFF , 1833px 111px #FFF , 136px 1589px #FFF , 1817px 1061px #FFF , 1145px 1752px #FFF , 1093px 1589px #FFF , 1505px 1431px #FFF , 1107px 1354px #FFF , 124px 1928px #FFF , 1119px 607px #FFF , 397px 334px #FFF , 478px 649px #FFF , 1912px 232px #FFF , 1379px 1854px #FFF , 647px 1496px #FFF , 201px 1753px #FFF , 1741px 9px #FFF , 1594px 1241px #FFF , 1280px 1270px #FFF , 1544px 1940px #FFF , 885px 1490px #FFF , 1424px 790px #FFF , 1172px 1986px #FFF , 889px 1106px #FFF , 1009px 1087px #FFF , 1263px 1230px #FFF , 1275px 57px #FFF , 547px 1119px #FFF , 237px 1660px #FFF , 32px 618px #FFF , 1137px 140px #FFF , 1348px 888px #FFF , 889px 1183px #FFF , 1989px 850px #FFF , 1111px 1818px #FFF , 1842px 547px #FFF , 1829px 954px #FFF , 1866px 1769px #FFF , 505px 457px #FFF , 836px 1012px #FFF , 333px 621px #FFF , 170px 1636px #FFF , 1858px 1350px #FFF , 1317px 1814px #FFF , 1218px 801px #FFF , 176px 1632px #FFF , 1329px 529px #FFF , 1165px 262px #FFF , 363px 1176px #FFF , 1091px 108px #FFF , 1870px 1698px #FFF , 1092px 480px #FFF , 156px 471px #FFF , 1550px 941px #FFF , 1064px 836px #FFF , 673px 1449px #FFF , 1385px 667px #FFF , 706px 1702px #FFF , 839px 1195px #FFF;
+  animation: animStar 150s linear infinite;
+}
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 328px 561px #e50404, 419px 1275px #e50404, 1320px 1968px #e50404, 1560px 370px #e50404, 473px 1092px #FFF , 857px 1555px #FFF , 437px 408px #FFF , 1523px 1056px #FFF , 638px 958px #FFF , 1154px 705px #FFF , 1242px 597px #FFF , 1186px 1494px #FFF , 322px 1948px #FFF , 1229px 1326px #FFF , 209px 843px #FFF , 1684px 1236px #FFF , 1343px 1425px #FFF , 329px 781px #FFF , 753px 639px #FFF , 28px 192px #FFF , 200px 1059px #FFF , 1440px 1646px #FFF , 1375px 1104px #FFF , 1893px 1743px #FFF , 529px 581px #FFF , 524px 334px #FFF , 1759px 1417px #FFF , 138px 1061px #FFF , 298px 289px #FFF , 1309px 1681px #FFF , 945px 816px #FFF , 1311px 1818px #FFF , 1013px 49px #FFF , 981px 1145px #FFF , 774px 1461px #FFF , 1890px 1774px #FFF , 762px 132px #FFF , 896px 824px #FFF , 954px 94px #FFF , 207px 399px #FFF , 172px 1624px #FFF , 952px 923px #FFF , 1833px 111px #FFF , 136px 1589px #FFF , 1817px 1061px #FFF , 1145px 1752px #FFF , 1093px 1589px #FFF , 1505px 1431px #FFF , 1107px 1354px #FFF , 124px 1928px #FFF , 1119px 607px #FFF , 397px 334px #FFF , 478px 649px #FFF , 1912px 232px #FFF , 1379px 1854px #FFF , 647px 1496px #FFF , 201px 1753px #FFF , 1741px 9px #FFF , 1594px 1241px #FFF , 1280px 1270px #FFF , 1544px 1940px #FFF , 885px 1490px #FFF , 1424px 790px #FFF , 1172px 1986px #FFF , 889px 1106px #FFF , 1009px 1087px #FFF , 1263px 1230px #FFF , 1275px 57px #FFF , 547px 1119px #FFF , 237px 1660px #FFF , 32px 618px #FFF , 1137px 140px #FFF , 1348px 888px #FFF , 889px 1183px #FFF , 1989px 850px #FFF , 1111px 1818px #FFF , 1842px 547px #FFF , 1829px 954px #FFF , 1866px 1769px #FFF , 505px 457px #FFF , 836px 1012px #FFF , 333px 621px #FFF , 170px 1636px #FFF , 1858px 1350px #FFF , 1317px 1814px #FFF , 1218px 801px #FFF , 176px 1632px #FFF , 1329px 529px #FFF , 1165px 262px #FFF , 363px 1176px #FFF , 1091px 108px #FFF , 1870px 1698px #FFF , 1092px 480px #FFF , 156px 471px #FFF , 1550px 941px #FFF , 1064px 836px #FFF , 673px 1449px #FFF , 1385px 667px #FFF , 706px 1702px #FFF , 839px 1195px #FFF;
+}
+
+#title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  color: #e50404;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+}
+#title span {
+  background: -webkit-linear-gradient(#b28208, #b29608);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+</style>
+<!-------------Sass script end ---->
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div style="margin-top: 10px" id='title'>
+    <br>
+    <span>
+   PLEASE KEEP CALM
+  </span>
+  <span>
+  </span>
+  <span>
+        TRUST OPTIMIZATION RESULTS, NEWS SENTIMENT, TRADE SIGNALS AND INDICATORS
+  </span>
+</div>
+
+<style>
+ body {
+  padding: 25px;
+  background-color: #ffffff;
+  color: rgb(105, 102, 102);
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: #050501;
+  color: #b29608;
+}
+</style>
+
+<script>
+function myFunction1() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+  }
+</script>
+
+        <style>
+        /* General Button Style */
+.buttonY {
+	display:block;
+	position: relative;
+	background: #0a0901;
+	width:570px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-size:16px;
+	text-decoration:none;
+	text-transform:uppercase;
+	color: #b29608;
+	margin:40px auto;
+	font-family:Helvetica, Arial, sans-serif;
+	box-sizing:border-box;
+}
+
+/* Button Border Style */
+.buttonY.border {
+		border-top:4px solid #1fb208;
+		border-bottom:4px solid #1fb208;
+}
+.buttonY.border:hover {
+	background: #1fb208;
+	color:#fff;
+}
+
+/* Button Ribbon-Outset Border Style */
+.buttonY.ribbon-outset.border:after, .button.ribbon-outset.border:before {
+		top: 50%;
+		content: " ";
+		height: 42px;
+		width: 42px;
+		position:absolute;
+		pointer-events: none;
+		background: #1fb208;
+	}
+	.buttonY.ribbon-outset.border:after {
+		left:0;
+		margin-top:-40px;
+		transform-origin:0 0;
+		box-sizing:border-box;
+		border-bottom:5px solid #1fb208;
+		border-left:5px solid #1fb208;
+		transform:rotate(45deg) skew(19deg,19deg);
+	}
+	.buttonY.ribbon-outset.border:before {
+		right:-42px;
+		margin-top:-40px;
+		transform-origin:0 0;
+		box-sizing:border-box;
+		border-top:5px solid #e04e5e;
+		border-right:5px solid #e04e5e;
+		transform:rotate(45deg) skew(19deg,19deg);
+	}
+	.buttonY.ribbon-outset.border:hover:after {
+		background: #1fb208
+	}
+	.buttonY.ribbon-outset.border:hover:before {
+		background: #1fb208
+	}
+    </style>
+
+    <style>
+        /* General Button Style */
+.buttonZ {
+	display:block;
+	position: relative;
+	background: #0a0901;
+	width:185px;
+	height:40px;
+	line-height:60px;
+	text-align:center;
+	font-size:15px;
+	text-decoration:none;
+	text-transform:uppercase;
+	color: #b29608;
+	margin:40px auto;
+	font-family:Helvetica, Arial, sans-serif;
+	box-sizing:border-box;
+}
+
+/* Button Border Style */
+.buttonZ.border {
+		border-top:4px solid #910505;
+		border-bottom:4px solid #a90808;
+}
+.buttonZ.border:hover {
+	background: #1fb208;
+	color:#fff;
+}
+
+/* Button Ribbon-Outset Border Style */
+.buttonZ.ribbon-outset.border:after, .button.ribbon-outset.border:before {
+		top: 50%;
+		content: " ";
+		height: 42px;
+		width: 42px;
+		position:absolute;
+		pointer-events: none;
+		background: #1fb208;
+	}
+	.buttonZ.ribbon-outset.border:after {
+		left:0;
+		margin-top:-40px;
+		transform-origin:0 0;
+		box-sizing:border-box;
+		border-bottom:5px solid #1fb208;
+		border-left:5px solid #1fb208;
+		transform:rotate(45deg) skew(19deg,19deg);
+	}
+	.buttonZ.ribbon-outset.border:before {
+		right:-42px;
+		margin-top:-40px;
+		transform-origin:0 0;
+		box-sizing:border-box;
+		border-top:5px solid #e04e5e;
+		border-right:5px solid #e04e5e;
+		transform:rotate(45deg) skew(19deg,19deg);
+	}
+	.buttonZ.ribbon-outset.border:hover:after {
+		background: #1fb208
+	}
+	.buttonZ.ribbon-outset.border:hover:before {
+		background: #1fb208
+	}
+    </style>
+<style>
+.button1 {
+  background-color: #0a0901;
+  border: 4px solid grey;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 75px;
+  width: auto;
+}
+
+.button1 {border-radius: 2px;}
+.button2x {
+  background-color: #050501; /*#b29608*/
+  border: 8px solid #1fb208; /*#0b22b8*/
+  padding: 32px 72px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  text-decoration-color: #b29608;
+  margin: 0px 0px;
+  cursor: pointer;
+  height: 750px;
+  width: 750px;
+}
+.button2x {border-radius: 100%;}
+.button3 {
+  background-color: #e50404;
+  border: 16px solid #0b22b8; /*#07c*/
+  color: #b29608;
+  padding: 32px 72px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 8px 2px;
+  cursor: pointer;
+}
+.button3 {border-radius: 504 {
+  background-color: #1fb208
+;
+  border: 4px solid grey;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.buttonX {
+  background-color: #a90808;
+  border: 4px solid grey;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 75px;
+  width: auto;
+}
+.pdfButton {
+  background-color: green;
+  border: 4px solid grey;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 75px;
+  width: auto;
+}
+.button5 {
+    background-color: darkblue; /*#1fb208*/
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    font-palette: light;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.buttonD {
+  background-color: #a90808;/*#1fb208*/
+  border: none;
+  color: #ffffff;
+  padding: 12px 26px;
+  text-align: center;
+  font-palette:light ;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+</style>
+<style type="text/css">
+  .mobileHide {display: block;}
+
+  /* Smartphone Portrait and Landscape */
+  @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px){
+      .mobileShow {display: none;}
+  }
+</style>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+ <div style=" width:100%;height:10%; margin-left:10px; margin-top: 0px; margin-bottom: 20px">
+   <t><span style="background-color: none"><font color="green"> <font size="5">TRADING AFFLUENT HEROS KEYS FOR ADVANCEMENT(TAHKA) </font></span></t>
+ </div>
+ <div style=" width:1600px;height:10%; margin-left:0px; margin-top: -40px; margin-bottom: 0px">
+   <t><span style="background-color: none"><font color="#daa520"> <font size="5">Welcome to the Quantum Portfolio Optimisation platform that helps you choose best investment assets </font></span></t>
+ </div>
+<div style="display: flex; margin: -50px;">
+    <div style="float: left; margin-left: 75px"><button style="height: 60px" class ="buttonZ ribbon-outset border" onclick="window.location.href='https://xxxxxxx.xxx.xx';">Home/Stocklist</button></div>
+    <div><button style="width: 140px; height: 60px" class ="buttonZ ribbon-outset border" onclick="window.location.href='https://xxxxxxx.xxx.xx';"> News </button></div>
+
+     <script>
+
+// say a message
+
+    function speak(text,callback) {
+    var u = new SpeechSynthesisUtterance();
+     const maleVoices = ['Google Siri - English (United States)'];
+     const foundVoice = speechSynthesis.getVoices().find(({ name }) => maleVoices.includes(name));
+    //const maleVoices = ['Google US English Male', 'Microsoft David Desktop - English (United States)'];
+
+   u.text = text;
+   u.lang = 'en-US';
+   if (foundVoice) u.voice = foundVoice[0];
+
+
+    u.onend = function () {
+            if (callback) {
+                callback();
+            }
+        };
+
+        u.onerror = function (e) {
+            if (callback) {
+                callback(e);
+            }
+        };
+     speechSynthesis.speak(u);
+
+
+    }
+
+    </script>
+
+
+
+    <div><button style="height: 60px; width: 350px" class = "buttonZ ribbon-outset border" onclick="speak('Welcome to Quantum Portfolio Optimisation! Important Note! The current Quantum portfolio optimisation is limited to 6 assets Instructions: Start by Pressing Classical optimisation button, wait for 15 minutes. This optimises on 72 large market capitalisation asset example Apple, Microsoft, Amazon and Tesla. During this time you can play music or watch news videos');speak('After optimisation is finished, Press Portfolio Optimisation Results button and choose assets for quantum optimisation and enter them in My Portfolio'); speak('After this Press Technical analysis button then Machine learning button then Quantum Optimization button  waiting for 2 minutes at each step.');speak('After all optimization processes are completed, press Portfolio Optimisation Results button');"> Quantum Optimisation Instructions </button></div>
+    <div><button style="height: 60px; width: 350px" class = "buttonZ ribbon-outset border" onclick="speak('Changing My Portfolio:  Click DELETE button to remove unwanted assets, then  enter symbols in Symbol dialogue box and press symbol button. Then enter startdate and press add date button. Then enter end date and press date button. Please Remember: Dont add more than 6 assets because our current quantum optimisation is limited to 6 qubits:');"> My Portfolio Instructions </button></div>
+    <div><button style="height: 60px" class = "buttonZ ribbon-outset border" type="button" onclick=window.location.href='https://www.tradingview.com/screener/'>Stock Screener</button></div>
+    <div><button style="width: 140px; height: 60px" class="buttonZ ribbon-outset border" type="button" onclick="window.location.href='https://finviz.com/map.ashx?t=sec&st=d1';">Stock Map</button></div>
+    <div><button style="height: 60px; width: 350px" class= "buttonZ ribbon-outset border" onclick="myFunction1(); SwapDivsWithClick();"> LightMode</button></div>
+
+
+</div>
+<br>
+
+<div>
+    <table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Quantum computer recommends investing in the assets listed above</th>
+
+        </tr>
+    </thead>
+    <tbody1>
+
+    </tbody1>
+</table>
+</div>
+    <script>
+        function restartTable(){
+
+            const tbody = document.getElementById("tblDetail").getElementsByTagName('tbody1')[0];
+            tbody.innerHTML = "";
+        }
+    </script>
+
+
+
+    <script>
+$(document).ready(function() {
+
+    promise = $.ajax({
+        type:"GET",
+        dataType:"text",
+        url:"https://raw.githubusercontent.com/xxxx/winners/main/quantum_stock.csv",
+        cache:false
+    });
+
+    promise.done(function(data){
+
+        //Parse CSV File
+        //split on new line
+        var dataArr = data.split("\n");
+
+        //for each line in array
+        $.each(dataArr,function(){
+            if (this != "") {
+
+                //split files and create row
+                var row = new String("");
+                valArr = this.split(",");
+                    row += "<td>"
+
+                $.each(valArr, function(){
+                    row += "<td>" + this +"</td>"
+                });
+
+                    row += "</td>"
+
+                    //Add row to table
+                    $('tbody1').append(row);
+
+            }
+
+        });
+
+    });
+
+    // Run script if request fails
+    promise.fail(function() {
+       console.log('A failure occurred');
+    });
+
+});
+</script>
+
+<br>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!---
+    <form id="your_form" onsubmit="yourFunction()">
+    <input onwebkitspeechchange="voiceInputOver(this.value)" x-webkit-speech name="symbol=NASDAQ%3A"/>
+    <i class="fa fa-microphone microphone-ico"></i>
+    <input class = "button" type="submit" value="Say Company Name and Get Predictive Analysis">
+    </form> --->
+
+
+
+
+<script>
+    function yourFunction(){
+    var action_src = "https://www.tradingview.com/chart/" + document.getElementsByName("symbol=NASDAQ%3A")[0].value;
+    var your_form = document.getElementById('your_form');
+    your_form.action = action_src ;
+}
+</script>
+
+<!---<form id="your_form" onsubmit="yourFunction()">
+    <input type="text" name="symbol=NASDAQ%3A">
+    <input class = "button" type="submit" value="Enter Symbol and Get Live Data">
+</form> --->
+
+
+
+ <body>
+
+   <!-- <h1>
+        <a href="/">Stocks </a>
+        <i class="angle double right icon"></i>
+        <font color="white">{{ strategy.name }}</font>
+    </h1> --->
+
+
+<div style="display: flex">
+ <div>
+     <!--<style>
+          h2, table, th, td {
+            border: 5px solid gray;
+            border-spacing: 0px;
+            text-align: center;
+            padding-top: 0px ;
+         }
+      </style>-->
+     <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table, th, td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  }
+</style>
+
+<!--<br/>-->
+
+    <!--<form action="/asset/" method="post">
+	<label> Assets </label>
+	<input type="text" name="assets" value={{request.form.assets}}>
+	<button type="submit"> Submit </button>
+    </form>
+
+    <form action="/start/" method="post">
+    <label> Start Date </label>
+	<input type="text" name="startdate" value={{request.form.startdate}}>
+	<button type="submit"> Submit </button>
+    </form> -->
+
+
+ </div>
+   <!-- <<div style=" float: left; margin-left: -30px">-->
+<div>
+<div style="display: flex">
+    <style>
+        .inputForm {
+            -moz-border-radius:10px; /* Firefox */
+            -webkit-border-radius: 10px; /* Safari, Chrome */
+            -khtml-border-radius: 10px; /* KHTML */
+            border-radius: 10px; /* CSS3 */
+            behavior:url("border-radius.htc");
+        }
+        </style>
+    <div>
+        <h2><span style="background-color: none" class="white-text"><font color="grey">My Portfolio</font></span></h2>
+         <table id= "tblSymbols" class="table_*_responsive">
+            <tr>
+                <th><font color="#a9a9a9">Symbol</font></th>
+                <th><font color="#a9a9a9">Options</font></th>
+            </tr>
+            {% for id in tododict %}
+            <tr>
+                <td><span style="background-color: none" class="white-text"><font color="#808080">{{ tododict[id] }}</font></span></td>
+                <td><a href="/delete/{{ id }}"><button class="button">Delete</button></a></td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <form method="POST" action="/add">
+                <td><input type="text" class="inputForm" name="newtodo" required></td>
+                <td style="text-align: center;"><button class="button" type="submit">Symbol</button></td>
+                </form>
+            </tr>
+            <tr>
+                <form method="POST" action="/add">
+                <td><input type="text" class="inputForm" name="newtodo" required></td>
+                <td style="text-align: center;"><button class="button" type="submit">Date</button></td>
+                </form>
+            </tr>
+        </table>
+    </div>
+    <div style=" margin-left: 50px">
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget BEGIN -->
+    <h2 style="text-align: center;"><span style="background-color: none"><font color="grey">Live Stock Data</font></span></h2>
+    <div style="background: transparent" class="tradingview-widget-container">
+          <div id="tradingview_818fb1" style="display: block ;background:transparent"></div>
+          <!--<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div> --->
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+           new TradingView.widget(
+          {
+          "autosize": false,
+          "width": 650,
+          "height":455,
+          "symbol": "NASDAQ:AAPL",
+          "interval": "D",
+          "timezone": "Etc/UTC",
+          "theme": "dark",
+          "transparent": true,
+          "style": "1",
+          "locale": "en",
+          "toolbar_bg": "red",
+          "enable_publishing": true,
+          "backgroundColor": "rgb(5,5,1)",
+          "allow_symbol_change": true,
+          "container_id": "tradingview_818fb1"
+        }
+          );
+          </script>
+
+
+
+      <div id="tradingview_818fb2" style="display: none; background-color:none"></div>
+      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView</div2>
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+       new TradingView.widget(
+      {
+      "autosize": false,
+      "width": 650,
+      "height":455,
+      "symbol": "NASDAQ:AAPL",
+      "interval": "D",
+      "timezone": "Etc/UTC",
+      "theme": "light",
+      "transparent": true,
+      "style": "1",
+      "locale": "en",
+      "toolbar_bg": "black",
+      "enable_publishing": true,
+      "allow_symbol_change": true,
+      "container_id": "tradingview_818fb2"
+    }
+      );
+      </script>
+
+
+<script type="text/javascript">
+function SwapDivsWithClick()
+{
+   d1 = document.getElementById("tradingview_818fb1");
+   d2 = document.getElementById("tradingview_818fb2");
+   if( d2.style.display == "none" )
+   {
+      d1.style.display = "none";
+      d2.style.display = "block";
+   }
+   else
+   {
+      d1.style.display = "block";
+      d2.style.display = "none";
+   }
+}
+</script>
+
+</div>
+
+
+
+</div>
+</div>
+</div>
+    <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/economic-calendar/" rel="noopener" target="_blank"><span class="blue-text">Economic Calendar</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+  {
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "width": "850",
+  "height": "300",
+  "locale": "en",
+  "importanceFilter": "-1,0,1"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+    </div>
+<!-- TradingView Widget END -->
+        <div class="mobile-show" style="width: 100%; margin-left: -150px; height: auto; float-displace: block-within-page">
+           <style>
+            table, th, td {
+              border: none;
+              border-collapse: collapse;
+            }
+            table, span, h2, th, td {
+              padding-top: 0px;
+              padding-bottom: 0px;
+              text-align: center;
+              position:relative;
+              z-index:3;
+            }
+            </style>
+     <h2><span style="background-color: transparent" class="white-text"><font color="#808080">My Watchlist</font></span></h2>
+    <!--<table id= "tblDetail" class="ui striped table">-->
+
+     <table><!-- id= "tblDetail" class="table_*_responsive">-->
+        <thead>
+            <tr>
+                <th><font color="#a9a9a9">Symbol</font></th>
+                <th style="text-align: center"><font color="#a9a9a9" >Name</font></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for stock in stocks %}
+            <tr>
+                <td><span style="background-color: none" class="white-text"><font color="#808080">{{ stock.symbol }}</font></span></td>
+                <td><span style="background-color: none" class="white-text"><font color="#808080" size="4px">{{ stock.company }}</font></span></td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+
+        <div style= "display: flex; margin-left: -100px; margin-top: 100px" class = "sec">
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/LVbUNRwpXzw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/vfkBEjc7GO0?si=M3U85i6DbIMfhZKx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+  </div>
+
+
+</div>
+
+</div>
+
+
+<div>
+    <!-------------my symbols list------------>
+
+    <style>
+        *{
+            margin: 0;
+        }
+        table {
+            align-items: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        h1 {
+            width: fit-content;
+            font-family: 'Courier New', Courier, monospace;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 50px;
+        }
+        th,td {
+            width: 250px;
+            justify-content: center;
+            font-size: 20px;
+            font-family: 'Lucida Sans';
+        }
+        td:nth-child(2) {
+            text-align: center;
+        }
+    </style>
+     <!---->
+     <script type="text/javascript">
+    function voiceInputOver(val){
+         alert("Voice input is complete");
+         alert("Your input is " + val);
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+
+
+.button {
+	display: inline-block;
+	padding: .75rem 1.25rem;
+	border-radius: 10rem;
+    background-color: #e50404;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: .15rem;
+	transition: all .3s;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 50%;
+		background-color: $color;
+		border-radius: 10rem;
+		z-index: -2;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 50%;
+		background-color: darken($color, 15%);
+		transition: all .3s;
+		border-radius: 10rem;
+		z-index: -1;
+	}
+	&:hover {
+		color: #fff;
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+/* optional reset for presentation */
+* {
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 20px;
+}
+.container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin-bottom: 2rem;
+  color: #1fb208;
+}
+span {
+  display: block;
+  margin-top: 2rem;
+  font-size: .7rem;
+  color: #1fb208;
+  a {
+    font-size: .7rem;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+}
+
+</style>
+
+    <!--<div class="input-group mb-3">
+
+     <div style="display: flex" class="input-group-append">
+        <form id="your_form" onsubmit="yourFunction()">
+         <div style="display: flex"
+
+        <div><input class="buttonY ribbon-outset border " type="submit" value=" Enter Symbol or Name to Get Live Data"></div>
+             <div><span class="input-group-text"><input onwebkitspeechchange="voiceInputOver(this.value)" x-webkit-speech name="symbol=NASDAQ%3A"/><i class="fa fa-microphone microphone-ico"></i></span></div>
+
+        </div>
+        </form>
+         <div ><button class="buttonY ribbon-outset border" type="button" onclick="restartTable()">Restart Watchlist Table</button></div>
+        <div><button class="buttonY ribbon-outset border"><a href="/refreshdatabase/">Refresh Database</a></button></div>
+     </div>
+
+    </div>
+</div>--->
+<!--------------->
+    <!------------------------->
+<!---For classical optimization -->
+<style>
+   html, body {
+  height: 100%;
+}
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button2 {
+  min-width: 200px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #2b2b2b;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+button2::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button2:hover, .button2:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+button2:hover::before, button2:focus::before {
+  opacity: 1;
+}
+
+button2::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+button2:hover::after, button2:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+</style>
+
+<br/>
+
+  <div><h3><span style="background-color: none; text-align: left" class="white-text"><font color="#808080">Screening by Classical Portfolio Optimization (Runtime ~ 20 min); Quantum Portfolio Optimization, Machine Learning News Analysis and Technical Analysis (Runtime ~ 5 min)</font></span></h3></div>
+<br/>
+    <!--<h4><span style="background-color: none" class="white-text"><font color="grey">Warning: Do not press results buttons while optimisation is running !!! </font></span></h4> -->
+    <!--<h4><span style="background-color: none" class="white-text"><font color="grey">You can Play music while waiting for optimisation to finish</font></span><span style='font-size:50px;'>&#128513;</span></h4>-->
+    <!---arranges 4 elements in a row --->
+<!---// src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest">--->
+<div style="display: flex; float: left margin-left: 0px">
+  <!-- <div><button style="height: 200px; width: 230px" class="button2x" onclick="processAlert1(); progressCircle(3000);"> <a style="color: white" href="/classicaloptimization/">1. Classical Optimize</a></button></div>--->
+        <script>
+            var url='https://127.0.1.1:8081';
+            var PythonShell = require('python-shell')
+            fetch('https://127.0.1.1:8081/')
+            //.then(res=>res.json())
+            .then(res=>PythonShell.run('classical_stock_data.py', options, function (err, results)))
+            .then(data=> {console.log(data)})
+
+        </script>
+
+<!--<div>
+        <button  style="height: 200px;width: 230px" class="button2x" onclick="processAlert1(); progressCircle(100);"> <a style="color: white" href="/machinelearning/"> 2. Machine Learning Sentiment Analysis</a></button> </div>--->
+        <script>
+
+            var url = 'https://127.0.1.1:8081';
+            var PythonShell = require('python-shell')
+            fetch('https://127.0.1.1:8081/')
+                //.then(res=>res.json())
+                .then(res => PythonShell.run('sentiment_analytics.py', options, function (err, results)))
+                .then(data => {
+                    console.log(data)
+                })
+
+        </script>
+        <!--<script>
+            function refresh2() {
+                setTimeout(function () {
+                    location.replace('https://xxxxxxx.xxx.xx/strategy/19')
+                }, 15000);
+            }
+        </script>--->
+
+
+
+   <div><button style="height: 200px;width: 230px" class="button2x" onclick="processAlert1(); progressCircle(12000);"> <a style="color: goldenrod;text-align: center" href="/optimization/"> 1: Classical Optimization </a></button></div>
+        <script>
+            var url='https://127.0.1.1:8081';
+            var PythonShell = require('python-shell')
+            fetch('https://127.0.1.1:8081/')
+            //.then(res=>res.json())
+            .then(res=>PythonShell.run('stock_data.py', options, function (err, results)))
+            .then(data=> {console.log(data)})
+
+        </script>
+
+    <div><button style="height: 200px;width: 230px" class="button2x" onclick="processAlert1(); progressCircle(3000);"> <a style="color: goldenrod;text-align: center" href="/technicalanalysis/"> 2: Technical Analysis</a></button></div>
+
+    <div><button style="height: 200px;width: 230px" class="button2x" onclick="processAlert1(); progressCircle(3000);"> <a style="color: goldenrod;text-align: center" href="/machinelearning/"> 3: MachineLearn Sentiment Analysis</a></button></div>
+
+    <!---TIMER--->
+     <div id="loader"> <div style="margin-left: -30px; margin-top: -70px"><span style="background-color: none" class="white-text"><font color="#ffd700">Running timer means process still running</font></span></div>
+	 <canvas id="elem" width="200" height="200"></canvas>
+     </div>
+    <!---TIMER ENDS--->
+
+    <div><button style="height: 200px;width: 230px" class="button2x" onclick="processAlert1(); progressCircle(3000);"> <a style="color: goldenrod;text-align: center" href="/qoptimizationml/"> 4: Quantum Optimization </a></button></div>
+        <script>
+            var url='https://127.0.1.1:8081';
+            var PythonShell = require('python-shell')
+            fetch('https://127.0.1.1:8081/')
+            //.then(res=>res.json())
+            .then(res=>PythonShell.run('stock_data.py', options, function (err, results)))
+            .then(data=> {console.log(data)})
+
+        </script>
+    <div><button style="height: 200px;width: 230px" class="button2x" onclick="speak('Open Microsoft Copilot App on your Mobile Phone and type question: Based on the fundamental analysis which 6 assets among the following have favourable results');"><a style="color: goldenrod;text-align: center"> 5: Fundamentals GPT4 Copilot </a></button></div>
+
+    <div><button style="height: 200px;width: 230px" class="button2x" onclick="speak('Open Microsoft Copilot App on your Mobile Phone and type question: Based on the current news sentiment analysis which 4 assets among the following have favourable results');"><a style="color: goldenrod;text-align: center"> 6: News GPT4 Copilot</a></button></div>
+
+
+   <!--- <div><button style="height: 200px;width: 230px" class="button2x" onclick="processAlert1(); progressCircle(600)"> <a style="color: white" href="/chartsIndicators/">4. Get Technical Analysis Charts </a></button></div>--->
+        <script>
+            var url='https://127.0.1.1:8081';
+            var PythonShell = require('python-shell')
+            fetch('https://127.0.1.1:8081/')
+            //.then(res=>res.json())
+            .then(res=>PythonShell.run('stoch.py', options, function (err, results)))
+            .then(data=> {console.log(data)})
+
+        </script>
+
+
+
+   <!---<div><button style="height: 200px;width: 230px" class="button2x" onclick="processAlert1(); progressCircle(1200); refresh5(); return true"> <a style="color: white" href="/automatictrading/"> 5. Generate Automatic Trading Signals </a></button></div>-->
+
+
+     <!--MUSIC PALETTE-->
+     <!--<div style="margin-left: 1120px; margin-top: -50px" class="app3"><div id = "music" style="height: 250px; width: 400px; display: none; text-decoration-color: darkgoldenrod" class="elfsight-app-9fcbc367-d373-4ddb-b8a7-128227772a4d"></div></div>
+        <div id="app3"></div>-->
+    <!--MUSIC PALETTE END-->
+
+</div>
+<br>
+<br>
+<div style="display: flex; margin-top: -70px">
+    <!--<div><button class = button type="button" width="auto" style="height: 45px" onclick=window.location.href='https://www.algotrader.com/solutions/wireswarm/'>AlgoStockTrading</button></div>--->
+    <div><input style="height: auto" class= "buttonY ribbon-outset border" type="button" id="clicking" value="Portfolio Optimisation Results" onclick="GFG_Fun(this);addResults()"></div>
+    <!--<div class="mobile-hide"><input class="button" type="button" id="clicking" value="Show Technical Analysis for All Assets " onclick="addAnalysis2()"></div> -->
+    <div id="techanalysis2"></div>
+    <!--<div><button class = button type="button" width="200" style="height: 45px" onclick=window.location.href='https://www.algotrader.com/solutions/wireswarm/'>AlgoCryptoTrading</button></div>--->
+    <div style="float: left; margin-left: 0px"><button style="height: auto" class = "buttonY ribbon-outset border" id="pdfButton">Portfolio Optimization Report PDF</button></div>
+    <div style="float: left; margin-left: 0px"><button style="height: auto" class= "buttonY ribbon-outset border" id="clicking" onclick= "timer(); toggle_visibility('music');toggle_visibility('app3');">Play Music While Optimisation Process Is Running</button></div> <!---style="background: none ; zoom: 100% "-->
+</div>
+    <div style= "display:flex; width:1700px" class = "sec">
+    <!--<div  class="tagembed-container" style="display: wrap;width:1500px;height:30%;overflow: none;"><div class="tagembed-socialwall" data-wall-id="55633" view-url="https://widget.tagembed.com/55633?view"></div><script src="//widget.tagembed.com/embed.min.js" type="text/javascript"></script></div>-->
+    <iframe width="450" height="275" src="https://www.youtube.com/embed/9NyxcX3rhQs?si=02sHUAhsA2bwEY4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="450" height="275" src="https://www.youtube.com/embed/OAHHA27td-A?si=AYsKV8pcMqlXigLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="450" height="275" src="https://www.youtube.com/embed/iyOq8DhaMYw?si=9nT8snFV1K2BA6c7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="450" height="275" src="https://www.youtube.com/embed/Uw_QyeHo8f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    </div>
+
+        <script>
+            var url='https://127.0.1.1:8081';
+            var PythonShell = require('python-shell')
+            fetch('https://127.0.1.1:8081/')
+            //.then(res=>res.json())
+            .then(res=>PythonShell.run('read_signal.py', options, function (err, results)))
+            .then(data=> {console.log(data)})
+            .then(alert(data.toString()))
+
+        </script>
+        <script>
+            function refresh5() {
+                setTimeout(function () {
+                    location.reload()
+                }, 180000);
+            }
+        </script>
+
+
+
+   <!----------------------Progress bar begins------------------------->
+
+<script>
+function processAlert1() {
+    alert("Please wait for process to complete!!!")
+}
+</script>
+
+<script>
+
+    $(".elem").click(function (e, callback) {
+
+        setTimeout(function () {
+
+            alert("Please wait for process to complete!");
+
+            if (typeof callback === "function") {
+
+                callback();
+                //progressCircle();
+
+
+            }
+
+        }, 1000);
+    });
+
+
+    $(".elem").trigger("click", function () {
+    progressCircle();
+    alert("Process almost completed. Please wait 15 seconds before refreshing webpage!")
+
+    });
+
+
+</script>
+
+   <!--------------------Progress bar ends---------------------------->
+<!--  <br>
+   <div id="loader"> <div style="margin-left: -1000px"><span style="background-color: none" class="white-text"><font color="grey">Running timer below means process is still running</font></span></div>
+	<canvas id="elem" width="200" height="200"></canvas>
+</div> -->
+
+   <script>
+       function progressCircle(time) {
+
+
+   var ctx = document.getElementById('elem').getContext('2d');
+var al = 0;
+var start = 4.72;
+var cw = ctx.canvas.width;
+var ch = ctx.canvas.height;
+var diff;
+function progressSim(){
+	diff = ((al / 2000) * Math.PI*2*10).toFixed(2);
+	ctx.clearRect(0, 0, cw, ch);
+	ctx.lineWidth = 17;
+	ctx.fillStyle = '#e50404';
+	ctx.strokeStyle = "#e50404";
+	ctx.textAlign = "center";
+	ctx.font="28px monospace";
+	ctx.fillText(al/10+'s', cw*.52, ch*.5+5, cw+12);
+	ctx.beginPath();
+	ctx.arc(100, 100, 75, start, diff/10+start, false);
+	ctx.stroke();
+	if(al >= time){
+		clearTimeout(sim);
+	    // Add scripting here that will run when progress completes
+        alert("Process almost completed. Please wait 15 seconds before refreshing webpage!")
+	}
+	al++;
+}
+var sim = setInterval(progressSim, 100);
+
+}
+
+</script>
+
+
+
+   <!------ for timer ---->
+
+<style>
+    section {
+  font-family: sans-serif;
+  color: white;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  color: white;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: blue;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: #e50404;//grey
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(255, 255, 255);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;//48
+}
+</style>
+<script type="text/javascript">
+   function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+   }
+</script>
+       <!--url('https://i.ibb.co/qmyVpBB/pi07-Quantum-computer-IBM.jpg')-->
+
+</div>
+     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
+</div> <!---ends arrangement in a row--->
+<style>
+    .app3 {
+  position: absolute;
+  width: auto;
+}
+</style>
+
+<div>
+        <div class="app3"><div id = "music" style="height: 240px; width: 1500px; display: none" class="elfsight-app-9fcbc367-d373-4ddb-b8a7-128227772a4d"></div></div>
+        <div id="app3"></div>
+   <script>
+   // Credit: Mateusz Rybczonec
+
+function timer() {
+
+document.getElementById("app3").innerHTML = `<div></div>`}
+
+   function timer1() {
+
+document.getElementById("app3").innerHTML = `<div id="app2"></div>`
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 50; //10
+const ALERT_THRESHOLD = 25;//5
+
+const COLOR_CODES = {
+  info: {
+    color: "green"
+  },
+  warning: {
+    color: "orange",
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: "red",
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 95;//use 20 for 20 min
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById("app2").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timeLeft
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed// use timeLeft for count down
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+}
+</script>
+
+
+</div>
+    <style>
+        .mobile-hide {
+  display: none; /* This is how it looks on mobile */
+
+}
+
+@media (min-width: 600px) {
+  .mobile-hide {
+    display: block; /* This is how it looks on desktop */
+
+  }
+}
+    /*@media screen and (object-fit: scale-down; max-width: 100%) {
+    .mobile-hide {
+        display: none !important;
+     }
+     .mobile-show {
+        display: block !important;
+     }
+    }
+    .desktop-hide {
+        display: none;
+     }
+     .desktop-show {
+        display: block;
+     }*/
+    </style>
+
+    <script>
+ //       function sendFile(fileData) {
+ //       var formData = new FormData();
+
+ //       formData.append('imageData', fileData);
+
+ //       $.ajax({
+ //           type: 'POST',
+ //           url: 'https://localhost:8000/strategy/19',
+ //           data: formData,
+ //           contentType: false,
+ //           processData: false,
+ //           success: function (data) {
+ //               if (data.success) {
+ //                   alert('Your file was successfully uploaded!');
+ //               } else {
+ //                   alert('There was an error uploading your file!');
+ //               }
+ //           },
+ //          error: function (data) {
+ //               alert('There was an error uploading your file!');
+ //           }
+ //       });
+ //   }
+    </script>
+
+
+
+    <script>
+        function processFile(dataURL, fileType) {
+        var maxWidth = 480;
+        var maxHeight = 800;
+
+        var image = new Image();
+        image.src = dataURL;
+
+        image.onload = function () {
+            var width = image.width;
+            var height = image.height;
+            var shouldResize = (width > maxWidth) || (height > maxHeight);
+
+            if (!shouldResize) {
+                sendFile(dataURL);
+                return;
+            }
+
+            var newWidth;
+            var newHeight;
+
+            if (width > height) {
+                newHeight = height * (maxWidth / width);
+                newWidth = maxWidth;
+            } else {
+                newWidth = width * (maxHeight / height);
+                newHeight = maxHeight;
+            }
+
+            var canvas = document.createElement('canvas');
+
+            canvas.width = newWidth;
+            canvas.height = newHeight;
+
+            var context = canvas.getContext('2d');
+
+            context.drawImage(this, 0, 0, newWidth, newHeight);
+
+            dataURL = canvas.toDataURL(fileType);
+
+            sendFile(dataURL);
+        };
+
+        image.onerror = function () {
+            alert('There was an error processing your file!');
+        };
+    }
+    </script>
+
+    <script>
+    @media only screen and (max-width: 810px){}
+    #content-desktop {
+    display: none;
+    }
+
+    #content-mobile {
+    display: inline;
+    }
+    }
+    </script>
+
+
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+        <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0;" name="viewport">
+        <link rel="stylesheet" href="image.css">
+        <script async="" src="picturefill.js"></script>
+        <script async="" src="allowurl.js"></script>
+    </head>
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="image.css">
+</head>
+
+     <script>
+/** function sync() {
+    var xhr = new XMLHttpRequest;
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var images = document.getElementsByClassName("depends-on-resource");
+
+            for (var i = 0; i < images.length; ++i) {
+                var image = images[i];
+                if (image.getAttribute('data-resource-name') == 'resource.bmp') {
+                    image.src = 'resource.bmp?i=' + new Date().getTime();
+                }
+            }
+        }
+    }
+    xhr.open('GET', 'resource.bmp', true);
+    xhr.send();
+}
+*/
+</script>
+
+<script>
+var adminManager = new ActiveXObject('Microsoft.ApplicationHost.WritableAdminManager');
+adminManager.CommitPath = "MACHINE/WEBROOT/APPHOST/Default Web Site";
+var requestFilteringSection = adminManager.GetAdminSection("system.webServer/security/requestFiltering", "MACHINE/WEBROOT/APPHOST/Default Web Site");
+
+var alwaysAllowedUrlsCollection = requestFilteringSection.ChildElements.Item("alwaysAllowedUrls").Collection;
+var addElement = alwaysAllowedUrlsCollection.CreateNewElement("add");
+addElement.Properties.Item("url").Value = "/allowed_url.aspx";
+addElement.Properties.Item("url").Value = "https://127.0.1.1:8081/mobile_covariance.png";
+addElement.Properties.Item("url").Value = "https://127.0.1.1:8081/covariance.png";
+addElement.Properties.Item("url").Value = "https://127.0.1.1:8081/stock.png";
+addElement.Properties.Item("url").Value = "https://127.0.1.1:8081/stock1.png";
+alwaysAllowedUrlsCollection.AddElement(addElement);
+
+adminManager.CommitChanges();
+</script>
+
+
+
+<script>
+function fileChange() {
+    var file = document.getElementById('input_img');
+    var form = new FormData();
+    form.append("image", file.files[0])
+
+   var settings = {
+      "url": "https://api.imgbb.com/1/upload?key=xxxxxxxxxxxxxxxxxxxxxxxxxxxxx&name="+ $('#name').val(),
+      "method": "POST",
+      "timeout": 0,
+      "processData": false,
+      "mimeType": "multipart/form-data",
+      "contentType": false,
+      "data": form
+    };
+
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+        var jx = JSON.parse(response);
+        console.log(jx.data.url);
+
+
+    });
+}
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+    const express = require('express');
+    const {spawn} = require('child_process');
+    const app = express();
+    const port = 8000;
+
+    app.get('/', (req, res) => {
+
+
+        // spawn new child process to call the python script
+        const python = spawn('python', ['getimg_url.py']);
+        // collect data from script
+        python.stdout.on('data', function (data) {
+            console.log('Pipe data from python script ...');
+            dataToSend = data.toString();
+
+        });
+        // in close event we are sure that stream from child process is closed
+        python.on('close', (code) => {
+            console.log(`child process close all stdio with code ${code}`);
+            // send data to browser
+            res.send(dataToSend)
+
+        })
+        app.listen(port, () => console.log(`Example app listening on port
+${port}!`));
+       document.getElementById("example").innerHTML=dataToSend;
+    });
+</script>
+
+<script>
+    var popup = require('popups');
+
+popup.alert({
+    content: 'Hello!'
+});
+</script>
+
+<script src='App.js'></script>
+<script type="text/javascript" src="App.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+    $('#loading').hide();
+    $('.divs_nav).first().css('display','block');
+});
+
+
+</script >
+
+<script type="module">
+
+    var link = document.getElementById('dynamicLink');
+    link.href = "https://ibb.co/ThXtVBs"
+    var img = document.getElementById('dynamicImg');
+    img.src= dataToSend
+</script>
+
+ <!------------------------------->
+<style>
+    /*  #Desktop
+================================================== */
+@media screen and (min-width: 481px) {
+    .desktop-device .mobile {
+        display: none;
+    }
+}
+
+/*  #Mobile
+================================================== */
+@media screen and (max-width: 480px) {
+    .mobile-device .desktop {
+        display: none;
+    }
+}
+ </style>
+
+<!----------start collecting results--------->
+<!----------was intended for collecting results by calling App.js but doesnt work-------------------------->
+<!---<p> --->
+   <!--- <script type="text/javascript" src="App.js"></script> --->
+<!---</p>---->
+   <!--- <input class="button" type="button" value="Show Classical Portfolio Optimisation Results" onclick="update()"> --->
+
+<!------------------------------------->
+<!------------------------------------->
+<div>
+
+
+</div>
+<div id="response"></div>
+
+<ul id="listItUp">
+</ul>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+//const {json} = require("express");
+
+const {json, response} = require("express");
+const router = require("./dash/dcc/dash_core_components");
+
+
+function addResults() {
+
+
+ /*   $(document.body).ready(function(){
+    var isMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+    if(isMobile) {
+       $("response").addClass("mobile-device");
+    } else {
+       $("response").addClass("desktop-device");
+    }
+});*/
+
+    //$(document).ready(function() {
+
+        //$('#button').click(function() {
+            // run an AJAX get request to the route you setup above...
+            // respect the cross-domain policy by using the same domain
+            // you used to access your index.html file!
+
+
+            async function sendurl() {
+
+            let req = new XMLHttpRequest();
+
+            req.onreadystatechange = () => {
+              if (req.readyState == XMLHttpRequest.DONE) {
+                console.log(req.responseText);
+                //alert(req.responseText)
+                window.data2 = req.responseText;
+              }
+            };
+
+            req.open("GET", "https://api.jsonbin.io/v3/b/626e0d3538be296761fa7bb7/latest", false);
+            req.setRequestHeader("X-Master-Key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            req.setRequestHeader("secret-key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+            req.send();
+              //$.get('https://api.allorigins.win/get?url=' + encodeURIComponent('192.168.2.11:8081'), function (data) {
+              //$.get('https://pastebin.com/embed_js/32KTyEgp', function(data) {
+
+      /*          $.get(url, function(data) {
+                    alert(data.toString());
+              $('#response').html(data.toString()); // show the list
+                window.data2 = data.toString();
+            }).then*/
+
+
+                 async function fetchData() {
+
+
+                    const createPromise = (message, resolveInMs) => {
+                        return new Promise((resolve) => {
+                            setTimeout(() => {
+                                resolve(message)
+                            }, resolveInMs)
+                        })
+                    }
+
+
+
+                            //AJAX Requests to get
+                            function loadQuestions() {
+                              var xmlHttp = new XMLHttpRequest();
+                               xmlHttp.open("GET", "data.json", true);
+                                xmlHttp.onreadystatechange = function() {
+
+                                if (this.readyState===4 && this.status === 200) {
+                                  //alert(this.readyState + " " + this.status + " " + this.responseText);
+                                   var response = xmlHttp.responseText;
+                                    //alert(response);
+                                  console.log(response);
+                                }
+                              }
+
+                              xmlHttp.send();
+
+                            }
+                            loadQuestions();
+ /**                           $.get('http://localhost:8000',  function(data) {
+                                $('#response').html(data.toString()); // show the list
+                                var data2 = data.toString();*/
+
+
+//                                alert(JSON.stringify(data2));
+
+                                const greetings = [data2];
+                                const greetingPromises = greetings.map(async greeting => {
+                                    const msg = await createPromise(greeting, 3000)
+                                    return `${msg.toString()}`
+                                });
+                                Promise.all(greetingPromises)
+                                    //})
+                                    //                       .then(values => values.text())
+
+                                    .then(values => {  // ... which is why `data` shows up here as the first parameter to the anonymous function
+                                        console.log('Request succeeded with JSON response', values)
+
+                                        printData(values)
+                                    })
+                                    .catch(error => {
+                                        console.log('Request failed', error)
+                                    })
+
+
+                    function printData(data) {
+
+                        var dataAll = data.toString();
+                        var dataAll2 = dataAll.split("[")[1];
+                        var dataAll3 = dataAll2.split("]")[0];
+                        //alert(dataAll3);
+// for stock images data
+                        var data1 = dataAll3.split(",")[0].split("'")[1];
+                        var data2 = dataAll3.split(",")[1].split("'")[1];
+                        var data3 = dataAll3.split(",")[2].split("'")[1];
+                        var data4 = dataAll3.split(",")[3].split("'")[1];
+                        var data5 = dataAll3.split(",")[4].split("'")[1];
+                        var data6 = dataAll3.split(",")[5].split("'")[1];
+                        var data7 = dataAll3.split(",")[6].split("'")[1];
+                        var data8 = dataAll3.split(",")[7].split("'")[1];
+// for classical optimisation images efficient frontier, Max Sharpe ratio allocation and Minimum Volatility allocation
+                        var data9 = dataAll3.split(",")[8].split("'")[1];
+                        var data10 = dataAll3.split(",")[9].split("'")[1];
+                        var data11 = dataAll3.split(",")[10].split("'")[1];
+                        var data12 = dataAll3.split(",")[11].split("'")[1];
+// for Trading View technical analysis data
+                        var data13 = dataAll3.split(",")[12].split("'")[1];
+                        var data14 = dataAll3.split(",")[13].split("'")[1];
+                        var data15 = dataAll3.split(",")[14].split("'")[1];
+                        var data16 = dataAll3.split(",")[15].split("'")[1];
+
+                        //var data4 = data3.split("png")[0];
+                        //var dataurl = data4.split("\"")[1];
+                        //var imgdataurl = dataurl+ "png" + "'";
+                        alert([data13, data14, data15, data16]);
+// Stochastic oscillator technical analysis data
+                        var data17 = dataAll3.split(",")[16].split("'")[1];
+                        var data18 = dataAll3.split(",")[17].split("'")[1];
+                        var data19 = dataAll3.split(",")[18].split("'")[1];
+                        var data20 = dataAll3.split(",")[19].split("'")[1];
+                        var data21 = dataAll3.split(",")[20].split("'")[1];
+                        var data22 = dataAll3.split(",")[21].split("'")[1];
+
+                        var li1 = document.createElement("li1");
+                        var li2 = document.createElement("li2");
+                        var li3 = document.createElement("li3");
+                        var li4 = document.createElement("li4");
+
+                        var li5 = document.createElement("li5");
+                        var li6 = document.createElement("li6");
+                        var li7 = document.createElement("li7");
+                        var li8 = document.createElement("li8");
+                        var li9 = document.createElement("li9");
+                        var li10 = document.createElement("li10");
+                        var li11 = document.createElement("li11");
+                        var li12 = document.createElement("li12");
+
+                        var li17 = document.createElement("li17");
+                        var li18 = document.createElement("li18");
+                        var li19 = document.createElement("li19");
+                        var li20 = document.createElement("li20");
+                        var li21 = document.createElement("li21");
+                        var li22 = document.createElement("li22");
+
+
+                        //li.innerHTML = "<img src=\"https://i.ibb.co/MpQS1Wm/image.png\">";
+
+                        li1.innerHTML = "<img srcset=\"" + data1 + "\" img width='640' img height='500'>";
+                        li2.innerHTML = "<img srcset=\"" + data2 + "\" img width='640' img height='500'>";
+                        li3.innerHTML = "<img srcset= \"" + data3 + "\" img width='640' img height='500'>";
+                        li4.innerHTML = "<img srcset=\"" + data4 + "\" img width='640' img height='500'>";
+
+                        li5.innerHTML = "<img srcset= \"" + data5 + "\" img width='640' img height='500'>";
+                        li6.innerHTML = "<img srcset=\"" + data6 + "\" img width='640' img height='500'>";
+
+                        li7.innerHTML = "<img srcset=\"" + data7 + "\" img width='640' img height='500'>";
+                        li8.innerHTML = "<img srcset=\"" + data8 + "\" img width='640' img height='500'>";
+                        li9.innerHTML = "<img srcset=\"" + data9 + "\" img width='640' img height='500'>";
+                        li10.innerHTML = "<img srcset=\"" + data10 + "\" img width='640' img height='500'>";
+                        li11.innerHTML = "<img srcset=\"" + data11 + "\" img width='640' img height='500'>";
+                        li12.innerHTML = "<img srcset=\"" + data12 + "\" img width='640' img height='500'>";
+
+                        li17.innerHTML = "<img srcset=\"" + data17 + "\" img width='640' img height='500'>";
+                        li18.innerHTML = "<img srcset=\"" + data18 + "\" img width='640' img height='500'>";
+                        li19.innerHTML = "<img srcset=\"" + data19 + "\" img width='640' img height='500'>";
+                        li20.innerHTML = "<img srcset=\"" + data20 + "\" img width='640' img height='500'>";
+                        li21.innerHTML = "<img srcset=\"" + data21 + "\" img width='640' img height='500'>";
+                        li22.innerHTML = "<img srcset=\"" + data22 + "\" img width='640' img height='500'>";
+
+                        var ul1 = document.getElementById('listItUp1');
+                        var ul2 = document.getElementById('listItUp2');
+                        var ul3 = document.getElementById('listItUp3');
+                        var ul4 = document.getElementById('listItUp4');
+
+                        var ul5 = document.getElementById('listItUp5');
+                        var ul6 = document.getElementById('listItUp6');
+                        var ul7 = document.getElementById('listItUp7');
+                        var ul8 = document.getElementById('listItUp8');
+                        var ul9 = document.getElementById('listItUp9');
+                        var ul10 = document.getElementById('listItUp10');
+                        var ul11 = document.getElementById('listItUp11');
+                        var ul12 = document.getElementById('listItUp12');
+
+                        var ul17 = document.getElementById('listItUp17');
+                        var ul18 = document.getElementById('listItUp18');
+                        var ul19 = document.getElementById('listItUp19');
+                        var ul20 = document.getElementById('listItUp20');
+                        var ul21 = document.getElementById('listItUp21');
+                        var ul22 = document.getElementById('listItUp22');
+
+
+                        ul1.appendChild(li1);
+
+                        ul2.appendChild(li2);
+
+                        ul3.appendChild(li3);
+
+                        ul4.appendChild(li4);
+
+                        ul5.appendChild(li5);
+
+                        ul6.appendChild(li6);
+
+                        ul7.appendChild(li7);
+
+                        ul8.appendChild(li8);
+
+                        ul9.appendChild(li9);
+                        ul10.appendChild(li10);
+                        ul11.appendChild(li11);
+                        ul12.appendChild(li12);
+
+                        ul17.appendChild(li17);
+
+                        ul18.appendChild(li18);
+
+                        ul19.appendChild(li19);
+                        ul20.appendChild(li20);
+                        ul21.appendChild(li21);
+                        ul22.appendChild(li22);
+
+
+
+                    }
+
+                    //usage:
+                }
+                fetchData();
+
+            }
+            sendurl();
+
+}
+
+</script>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+   async function addAnalysis() {
+        var li12 = document.createElement("li12");
+        li12.innerHTML = '<div style="display:flex"> <div class="tradingview-widget-container"> <div class="tradingview-widget-container__widget"></div> <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-TSLA/technicals/" rel="noopener" target="_blank"><span class="blue-text">Technical Analysis for TSLA</span></a> by TradingView</div> <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>{"interval": "1m", "width": 425, "isTransparent": false, "height": 450, "symbol": "NASDAQ:TSLA", "showIntervalTabs": true, "locale": "en", "colorTheme": "dark"}</div>';
+        var ul12 = document.getElementById("listItUp12");
+        ul12.appendChild(li12);
+}
+</script>
+
+<!----------Adding Technical analysis------->
+
+    <!---->
+    <style>
+        #mydiv {
+            display: none;
+            background: none;
+            height: auto;
+            width: auto;
+            margin: 0 auto;
+            color: #050501;
+        }
+    </style>
+    <script>
+        $('#GFG_UP').text(
+        "Click on button to toggle the DIV Box using Bootstrap.");
+
+        function show(divId) {
+            $("#" + divId).show();
+        }
+
+        function GFG_Fun() {
+            show('mydiv');
+            $('#GFG_DOWN').text("DIV Box is visible.");
+        }
+    </script>
+    <!---->
+
+
+   <ul13 id="listItUp13">
+</ul13>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function addAnalysis2(){
+    //code block 0
+    async function sendurl() {
+
+        let req = new XMLHttpRequest();
+
+        req.onreadystatechange = () => {
+          if (req.readyState == XMLHttpRequest.DONE) {
+            console.log(req.responseText);
+            //alert(req.responseText)
+            window.data2 = req.responseText;
+          }
+        };
+
+        req.open("GET", "https://api.jsonbin.io/v3/b/626e0d3538be296761fa7bb7/latest", false);
+        req.setRequestHeader("X-Master-Key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        req.setRequestHeader("secret-key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        req.send();
+
+        //code block 2
+         async function fetchData() {
+
+
+            const createPromise = (message, resolveInMs) => {
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve(message)
+                    }, resolveInMs)
+                })
+            }
+
+        //code block 3
+
+        //AJAX Requests to get
+            function loadQuestions() {
+              var xmlHttp = new XMLHttpRequest();
+               xmlHttp.open("GET", "data.json", true);
+                xmlHttp.onreadystatechange = function() {
+
+                if (this.readyState===4 && this.status === 200) {
+                  //alert(this.readyState + " " + this.status + " " + this.responseText);
+                   var response = xmlHttp.responseText;
+                    //alert(response);
+                  console.log(response);
+                }
+              }
+
+              xmlHttp.send();
+
+            }
+            loadQuestions();
+
+            // code block 4///////////////////////////////////////////
+
+            const greetings = [data2];
+            const greetingPromises = greetings.map(async greeting => {
+                const msg = await createPromise(greeting, 3000)
+                return `${msg.toString()}`
+            });
+            Promise.all(greetingPromises)
+              .then(values => {  // ... which is why `data` shows up here as the first parameter to the anonymous function
+                console.log('Request succeeded with JSON response', values)
+
+                printData(values)
+            })
+            .catch(error => {
+                console.log('Request failed', error)
+            })
+             //code block 5//////////////////////////////////////////////
+             function printData(data) {
+                var dataAll = data.toString();
+                var dataAll2 = dataAll.split("[")[1];
+                var dataAll3 = dataAll2.split("]")[0];
+                //alert(dataAll3);
+                var data13 = dataAll3.split(",")[12].split("'")[1];
+                var data14 = dataAll3.split(",")[13].split("'")[1];
+
+                var data15 = dataAll3.split(",")[14].split("'")[1];
+                var data16 = dataAll3.split(",")[15].split("'")[1];
+                //var data4 = data3.split("png")[0];
+                //var dataurl = data4.split("\"")[1];
+                //var imgdataurl = dataurl+ "png" + "'";
+                //alert([data7, data8, data9, data10]);
+
+                //code block 6/////////////////////////////////////////
+                var li13 = document.createElement("li13");
+                li13.innerHTML = ` <!-- TradingView Widget BEGIN -->
+
+                <div style="display:flex">
+                <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-`+ data13 +`/technicals/" rel="noopener" target="_blank"><span style="background-color: #0b22b8" class="white-text">Technical Analysis by TradingView for </span></a> <span style="background-color: #e50404" class="blue-text" id = "name13"></div>
+
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-`+ data14 +`/technicals/" rel="noopener" target="_blank"><span style="background-color: #0b22b8" class="white-text">Technical Analysis by TradingView for </span></a> <span style="background-color: #e50404" class="blue-text" id = "name14"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-`+ data15 +`/technicals/" rel="noopener" target="_blank"><span style="background-color: #0b22b8" class="white-text">Technical Analysis by TradingView for </span></a> <span style="background-color: #e50404" class="white-text" id = "name15"></div>
+
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-`+ data16 +`/technicals/" rel="noopener" target="_blank"><span style="background-color: #0b22b8" class="white-text">Technical Analysis by TradingView for </span></a> <span style="background-color: #e50404" class="white-text" id = "name16"></div>
+
+
+
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+                {
+                "interval": "1m",
+                "width": 425,
+                "isTransparent": false,
+                "height": 450,
+                "symbol": "NASDAQ:AAPL",
+                "showIntervalTabs": true,
+                "locale": "en",
+                "colorTheme": "light"
+                }`;
+                /*var ul13 = document.getElementById('listItUp13');
+                ul13.append(li13);*/
+                var name13 = data13;
+                var name14 = data14;
+                var name15 = data15;
+                var name16 = data16;
+                document.getElementById("name13").innerHTML = name13;
+                document.getElementById("name14").innerHTML = name14;
+                document.getElementById("name15").innerHTML = name15;
+                document.getElementById("name16").innerHTML = name16;
+
+
+
+             }
+        //usage:
+        }
+        fetchData();
+    }
+    sendurl();
+}
+
+</script>
+</div>
+
+<style>
+@media only screen and (max-width: 800px) {
+    .m-show {
+        display: inline !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+}
+</style>
+
+<div id="imgDiv">
+<a id="dynamicLink" href=""><img id= "dynamicImg" src="" /> </a>
+</div>
+
+ </body>
+
+    <head>
+    <meta charset="utf-8" />
+
+    <title>Images Reveal</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+       /* window.onload = alert('Welcome to Davie Mtsuko Quantum Portfolio Optimisation!\n\nImportant Note:\nThe current Quantum portfolio optimisation is limited to 6 assets \n\nInstructions:\n 1. ' +
+            'Start by Pressing Optimize button\n 2. Press Show Quantum and Classical Portfolio Optimisation Results \n\n Changing portfolio:\n ' +
+            '1. Click Restart Database\n 2. Click Refresh Database\n 3. Navigate back to strategy/19 page\n 4. Click Stocks\n\n To add assets if list has less than 6 assets:\n Click Stocks')
+*/
+        $(document).keypress(function(e) {
+            if (e.which == 13) {
+                alert('Please submit text via button');
+            }
+        });
+
+        var string = "";
+
+        function imageReveal() {
+
+            var rubberDuckie = document.getElementById("textInput");
+            var imageReveal = rubberDuckie.value;
+            if (imageReveal == "") {
+                alert("Please enter some text!");
+
+            } else {
+
+                    var li = document.createElement("li");
+                    li.innerHTML = "<img src=\"" + imageReveal + "\">";
+
+                var ul = document.getElementById("listItUp");
+                ul.appendChild(li);
+            }
+            rubberDuckie.value = "";
+        }
+    </script>
+
+</head>
+
+</div>
+
+<!--<body style="background-image: url('https://i.ibb.co/qmyVpBB/pi07-Quantum-computer-IBM.jpg')"> -->
+<div style="display: inline-block; margin-top: -70px; margin-bottom: -450px">
+<!--classical optimisation results start--->
+ <div style="display: flex">
+    <div>
+     <div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Classical Optimisation Using Efficient Frontier</font></span></div>
+    <ul id="listItUp9">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+    <div style="margin-top: 60px">
+    <div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Maximum Sharpe Ratio Portfolio Allocation</font></span></div>
+
+        <ul id="listItUp10">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+</div> <!--End of classical results--->
+
+ <div style="display: flex">
+
+    <div>
+<div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Minimum Volatility Portfolio Allocation</font></span></div>
+    <ul id="listItUp11">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+ <div>
+<div  id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Machine Learning News Based Sentiment Analysis</font></span></div>
+    <ul id="listItUp12">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+</div> <!---End of classical results--->
+<!--classical optimisation results end--->
+
+
+<div style= "display:wrap"> <!--wrap-->
+    <script style="display:grid"></script>
+
+    <div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Quantum Portfolio Optimization Results</font></span></div>
+
+<div style="display: flex">
+    <div>
+
+    <ul id="listItUp1">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+    <div>
+
+    <ul id="listItUp2">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+</div> <!---End of Quantum Results--->
+
+<div style="display: flex">
+    <div>
+ <div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="#a9a9a9">***Asset1***</font></span></div>
+    <ul id="listItUp3">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+    <div >
+        <div id="mydiv"  style="text-align: center"><span style="background-color: none" class="white-text"><font color="#a9a9a9">***Asset2***</font></span></div>
+    <ul id="listItUp4">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+</div> <!---End of Quantum Results--->
+<div style="display: flex">
+    <div>
+ <div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="#a9a9a9">***Asset3***</font></span></div>
+    <ul id="listItUp5">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+    <div>
+        <div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="#a9a9a9">***Asset4***</font></span></div>
+    <ul id="listItUp6">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+</div> <!---End of Quantum Results--->
+<div style="display: flex">
+    <div>
+<div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="#a9a9a9">***Asset5***</font></span></div>
+    <ul id="listItUp7">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+    <div>
+    <div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="#a9a9a9">***Asset6***</font></span></div>
+
+    <ul id="listItUp8">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+</div> <!---End of Quantum Results--->
+
+
+
+    <!---stochastic oscillator data begin--->
+
+     <div style="display: flex">
+
+    <div>
+<div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Stochastic1</font></span></div>
+    <ul id="listItUp17">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+ <div>
+<div  id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Stochastic2</font></span></div>
+    <ul id="listItUp18">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+</div> <!---End of classical results--->
+
+         <div style="display: flex">
+
+    <div>
+<div id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Stochastic3</font></span></div>
+    <ul id="listItUp19">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+ <div>
+<div  id="mydiv" style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Stochastic4</font></span></div>
+    <ul id="listItUp20">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+</div> <!---End of classical results--->
+
+ <div style="display: flex; margin-bottom: 0px">
+
+    <div>
+<div id="mydiv" style="text-align: center; margin-bottom: 200px"><span style="background-color: none" class="white-text"><font color="grey">Stochastic5</font></span></div>
+    <ul id="listItUp21">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+ <div>
+<div  id="mydiv" style="text-align: center; margin-bottom: 200px"><span style="background-color: none" class="white-text"><font color="grey">Stochastic6</font></span></div>
+    <ul id="listItUp22">
+
+    </ul>
+
+    <p id="pTags">
+
+    </p>
+
+    </div>
+
+
+
+
+</div> <!---End of classical results--->
+     <!---stochastic oscillator data end--->
+<div style=" display: inline-block; margin-top: -250px; margin-bottom: auto">
+    <span>
+[ Optimisation results are displayed here after clicking results button ]
+    </span>
+<br>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="display: flex">
+   <title>Generate PDF</title>
+</div>
+</div>
+
+<div>
+   <div class="container">
+      <!--<button id="pdfButton"><b>Generate Optimization Report PDF File</b></button> -->
+      <div style="background: grey; display: none " class="card" id="generatePDF"> <!---generatePDF--->
+<!------------###############################------------>
+          <div style= "display:wrap">
+    <script style="display:grid"></script>
+
+    <div style="text-align: center"><span style="background-color: none" class="white-text"><font color="grey">Quantum Portfolio Optimization Results</font></span></div>
+
+
+             <script>
+             async function sendurl() {
+
+                 let req = new XMLHttpRequest();
+
+                 req.onreadystatechange = () => {
+                     if (req.readyState == XMLHttpRequest.DONE) {
+                         console.log(req.responseText);
+                         //alert(req.responseText)
+                         window.data2 = req.responseText
+
+                     }
+                 };
+
+                 req.open("GET", "https://api.jsonbin.io/v3/b/626e0d3538be296761fa7bb7/latest", false);
+                 req.setRequestHeader("X-Master-Key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+                 req.setRequestHeader("secret-key", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+                 req.send();
+
+
+             }
+             sendurl();
+             image1 = data2;
+             //alert(image1)
+             var imgdataAll = data2.toString();
+                        var imgdataAll2 = imgdataAll.split("[")[1];
+                        var imgdataAll3 = imgdataAll2.split("]")[0];
+             //alert(imgdataAll3)
+             var imgdata1 = imgdataAll3.split(",")[0].split("'")[1];
+             var imgdata2 = imgdataAll3.split(",")[1].split("'")[1];
+             var imgdata3 = imgdataAll3.split(",")[2].split("'")[1];
+             var imgdata4 = imgdataAll3.split(",")[3].split("'")[1];
+             var imgdata5 = imgdataAll3.split(",")[4].split("'")[1];
+             var imgdata6 = imgdataAll3.split(",")[5].split("'")[1];
+             var imgdata7 = imgdataAll3.split(",")[6].split("'")[1];
+             var imgdata8 = imgdataAll3.split(",")[7].split("'")[1];
+             var imgdata9 = imgdataAll3.split(",")[8].split("'")[1];
+             var imgdata10 = imgdataAll3.split(",")[9].split("'")[1];
+             var imgdata11 = imgdataAll3.split(",")[10].split("'")[1];
+             var imgdata12 = imgdataAll3.split(",")[11].split("'")[1];
+
+                $(function(){
+                   $('#tp_otherinfo').find('img').each(function(){
+                       var srcpath1 = $(this).attr('src');
+                       srcpath1 = srcpath1.replace('imgdata1',imgdata1);
+                       $(this).attr('src',srcpath1);
+
+                       var srcpath2 = $(this).attr('src');
+                       srcpath2 = srcpath2.replace('imgdata2',imgdata2);
+                       $(this).attr('src',srcpath2);
+
+                       var srcpath3 = $(this).attr('src');
+                       srcpath3 = srcpath3.replace('imgdata3',imgdata3);
+                       $(this).attr('src',srcpath3);
+
+                       var srcpath4 = $(this).attr('src');
+                       srcpath4 = srcpath4.replace('imgdata4',imgdata4);
+                       $(this).attr('src',srcpath4);
+
+                       var srcpath5 = $(this).attr('src');
+                       srcpath5 = srcpath5.replace('imgdata5',imgdata5);
+                       $(this).attr('src',srcpath5);
+
+                       var srcpath6 = $(this).attr('src');
+                       srcpath6 = srcpath6.replace('imgdata6',imgdata6);
+                       $(this).attr('src',srcpath6);
+
+                       var srcpath7 = $(this).attr('src');
+                       srcpath7 = srcpath7.replace('imgdata7',imgdata7);
+                       $(this).attr('src',srcpath7);
+
+                       var srcpath8 = $(this).attr('src');
+                       srcpath8 = srcpath8.replace('imgdata8',imgdata8);
+                       $(this).attr('src',srcpath8);
+
+                       var srcpath9 = $(this).attr('src');
+                       srcpath9 = srcpath9.replace('imgdata9',imgdata9);
+                       $(this).attr('src',srcpath9);
+
+
+                    });
+                });
+                $(function(){
+                   $('#tp_otherinfo2').find('img').each(function(){
+
+                       var srcpath10 = $(this).attr('src');
+                       srcpath10 = srcpath10.replace('imgdata10',imgdata10);
+                       $(this).attr('src',srcpath10);
+
+                       var srcpath11 = $(this).attr('src');
+                       srcpath11 = srcpath11.replace('imgdata11',imgdata11);
+                       $(this).attr('src',srcpath11);
+
+                       var srcpath12 = $(this).attr('src');
+                       srcpath12 = srcpath12.replace('imgdata12',imgdata12);
+                       $(this).attr('src',srcpath12);
+                   });
+                });
+
+                 $(function(){
+                   $('#tp_otherinfo3').find('img').each(function(){
+                       var srcpath12 = $(this).attr('src');
+                       srcpath12 = srcpath12.replace('imgdata12',imgdata12);
+                       $(this).attr('src',srcpath12);
+                   });
+                });
+
+
+             </script>
+              <style>
+                .myImg{
+	                text-align:center;
+                }
+            </style>
+            <div class="myImg" id = "tp_otherinfo">
+            <img  src="imgdata1" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.1: Covariance Matrix</font></span></h4>
+            <img  src="imgdata2"  width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.2: Historical Stock Data</font></span></h4>
+            <img  src="imgdata3" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.3: ASSET1</font></span></h4>
+            <img  src="imgdata4" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.4: ASSET2</font></span></h4>
+            <img  src="imgdata5" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.5: ASSET3</font></span></h4>
+            <img  src="imgdata6" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.6: ASSET4</font></span></h4>
+            <img  src="imgdata7" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.7: ASSET5</font></span></h4>
+            <img  src="imgdata8" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.8: ASSET6</font></span></h4>
+            <img  src="imgdata9" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.9: Classical Optimisation Using Efficient Frontier</font></span></h4>
+            </div>
+            <div class="myImg" id = "tp_otherinfo2">
+            <img  src="imgdata10" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.10: Maximum Sharpe Ratio Portfolio Allocation</font></span></h4>
+            <img  src="imgdata11" width="500px" height="400px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.11: Minimum Volatility Portfolio Allocation</font></span></h4>
+            </div>
+            <div class="myImg" id = "tp_otherinfo3">
+            <img  src="imgdata12" width="500px" height="600px" alt="">
+            <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="blue">Fig.12: Machine Learning News Based Sentiment Analysis</font></span></h4>
+            </div>
+<!------------###############################------------>
+      </div>
+   </div>
+   <script>
+      var button = document.getElementById("pdfButton");
+      var makepdf = document.getElementById("generatePDF");
+      button.addEventListener("click", function () {
+         var mywindow = window.open("", "PRINT", "height=600,width=400");
+         mywindow.document.write(makepdf.innerHTML);
+         mywindow.document.close();
+         mywindow.focus();
+         mywindow.print();
+         return true;
+      });
+   </script>
+</div>
+ <!--<div><button class="buttonR" onclick="window.location.href='https://xxxxxxx.xxx.xx/automatictrading';">Show Trading Signals</button></div> -->
+
+    <!-- use the Okta widget to power authentication! -->
+<script type="text/javascript">
+  var oktaSignIn = new OktaSignIn({
+    baseUrl: "{{ YOUR_ORG_URL }}",
+    clientId: "{{ YOUR_APP_CLIENT_ID }}",
+    authParams: {
+      issuer: "default",
+      responseType: ['token', 'id_token'],
+      display: 'page'
+    }
+  });
+
+  if (oktaSignIn.token.hasTokensInUrl()) {
+    oktaSignIn.token.parseTokensFromUrl(
+      // If we get here, the user just logged in.
+      function success(res) {
+        var accessToken = res[0];
+        var idToken = res[1];
+
+        oktaSignIn.tokenManager.add('accessToken', accessToken);
+        oktaSignIn.tokenManager.add('idToken', idToken);
+
+        window.location.hash='';
+        document.getElementById("messageBox").innerHTML = "Hello, " + idToken.claims.email + "! You just logged in! :)";
+      },
+      function error(err) {
+        console.error(err);
+      }
+    );
+  } else {
+    oktaSignIn.session.get(function (res) {
+      // If we get here, the user is already signed in.
+      if (res.status === 'ACTIVE') {
+        document.getElementById("messageBox").innerHTML = "Hello, " + res.login + "! You are *still* logged in! :)";
+        return;
+      }
+      oktaSignIn.renderEl(
+        { el: '#okta-login-container' },
+        function success(res) {},
+        function error(err) {
+          console.error(err);
+        }
+      );
+    });
+  }
+</script>
+ <script>
+ function _(el) {
+  return document.getElementById(el);
+}
+
+function uploadFile() {
+  var file = _("file1").files[0];
+  // alert(file.name+" | "+file.size+" | "+file.type);
+  var formdata = new FormData();
+  formdata.append("file1", file);
+  var ajax = new XMLHttpRequest();
+  ajax.upload.addEventListener("progress", progressHandler, false);
+  ajax.addEventListener("load", completeHandler, false);
+  ajax.addEventListener("error", errorHandler, false);
+  ajax.addEventListener("abort", abortHandler, false);
+  ajax.open("POST", "file_upload_parser.php");
+  ajax.send(formdata);
+}
+
+function progressHandler(event) {
+  _("loaded_n_total").innerHTML = "Uploaded " + event.loaded + " bytes of " + event.total;
+  var percent = (event.loaded / event.total) * 100;
+  _("progressBar").value = Math.round(percent);
+  _("status").innerHTML = Math.round(percent) + "% uploaded... please wait";
+}
+
+function completeHandler(event) {
+  _("status").innerHTML = event.target.responseText;
+  _("progressBar").value = 0; //wil clear progress bar after successful upload
+}
+
+function errorHandler(event) {
+  _("status").innerHTML = "Upload Failed";
+}
+
+function abortHandler(event) {
+  _("status").innerHTML = "Upload Aborted";
+}
+</script>
+
+<!------- progress status---------->
+
+<!----chart from data with indicators--->
+    <script type="text/javascript">
+       async function showChart1() { await fetch("https://pub-api-trader-demo-prod.etnasoft.us/api/v1.0/history/symbols", {
+  body: "{"Security":  \n \t{"Symbol":"AAPL", \\ \n \t"Exchange":"XNAS", \\ \n \t"Currency":"USD"}, \\ \n \t \\ \n "SecurityHistorySettings": \\ \n \t{"StartDate":1542776400, \\ \n \t"EndDate":1550764844, \\ \n \t"CandlesCount":-1, \\ \n \t"Period":"4h", \\ \n \t"Interval":-7, \\ \n \t"IncludeNonMarketData":false}, \\ \n  \\ \n "IndicatorsHistorySettings":[ \\ \n \t{"Signature":"MACD|4h|false|12|26|9", \\ \n \t"Interval":-7, \\ \n \t"StartDate":1542776400, \\ \n \t"EndDate":1550764844, \\ \n \t"CandlesCount":-1, \\ \n \t"Offset":0, \\ \n \t"Indicator":{ \\ \n \t\t"id":4, \\ \n \t\t"indicatorId":1, \\ \n \t\t"type":"movingAverageConvergenceDivergenceIndicator", \\ \n \t\t"position":"lower", \\ \n \t\t"external":true, \\ \n \t\t"settings":{ \\ \n \t\t\t"id":4, \\ \n \t\t\t"type":"movingAverageConvergenceDivergenceIndicator", \\ \n \t\t\t"shortThickness":2, \\ \n \t\t\t"longThickness":2, \\ \n \t\t\t"shortBrush":"32c814", \\ \n \t\t\t"longBrush":"dc1414", \\ \n \t\t\t"signalBrush":"ff9900", \\ \n \t\t\t"shortPeriod":12, \\ \n \t\t\t"longPeriod":26, \\ \n \t\t\t"signalPeriod":9, \\ \n \t\t\t"showLastValue":true, \\ \n \t\t\t"showCurrentPoint":true, \\ \n \t\t\t"showLevelBands":false}}}] \\ \n }",
+  headers: {
+    Accept: "application/json",
+    Authorization: "Bearer xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "Content-Type": "application/json",
+    "Et-App-Key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  },
+  method: "PUT"
+})
+       }
+
+    </script>
+</div>
+<br>
+<br>
+<!----Stock charts begin----->
+    <div style="display: inline-block; margin-top: -450px">
+  <!---div style="display: flex height: 1000px"-->
+     <!----symbols and codes script start-->
+    <div style="display:inline-block;  width: 500px; margin-top: 300px; margin-right:-550px; margin-left: 0px" id="myData">Qu-Optimised Symbol/Code:</div>
+    <script type="text/javascript">
+        fetch('https://raw.githubusercontent.com/xxxx/winners/main/database.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+               console.log('error: ' + err);
+            });
+
+        async function appendData(data) {
+            let mainContainer = document.getElementById("myData");
+            for (let i = 0; i < 6; i++) {
+                let div = document.createElement("div");
+                data_string = await JSON.stringify(data).split(",")
+                //alert(JSON.stringify(data_string));
+
+                //alert(i);
+                div.innerHTML = 'Symbol code: ' + data_string[i.toString()].replace("{",'').split(":").pop() + ' ' + i;
+                mainContainer.appendChild(div);
+            }
+        }
+    </script>
+    <!----symbols and codes script end-->
+        <style>
+            audio {
+            /*border-radius: 90px;*/
+            width: 250px;
+            height: 45px;
+            margin-left: 0px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            }
+
+            audio::-webkit-media-controls-play-button {
+            display: block !important;
+            }
+
+            audio::-webkit-media-controls-mute-button {
+            display: none !important;
+            }
+
+            audio::-webkit-media-controls-volume-slider {
+            display: none !important;
+            }
+
+            audio::-webkit-media-controls-volume-control-container.closed {
+            display: none !important;
+            }
+            audio::-webkit-media-controls-volume-control-container{
+            display: none !important;
+            }
+        </style>
+    <div>
+     <h4 style="margin-left: -1200px"><span style="background-color: none" class="white-text"><font color="#daa520">Play MACD Trading Signals</font></span></h4>
+    <audio id="player" controls>
+    <source src='https://raw.githubusercontent.com/xxxx/winners/main/mix.mp3' type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+        <div> <button class="button" onclick="document.getElementById('player').play()">Play</button> </div>
+    </div>
+         <!---stock screener ------->
+        <!-- TradingView Widget BEGIN -->
+        <br>
+<div style="margin-left: 250px; margin-top: -450px" class="tradingview-widget-container">
+  <h4 style="text-align: center"><span style="background-color: none" class="white-text"><font color="#daa520">Stock Screener for Large Capitalized Assets</font></span></h4>
+    <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets</span></a> on TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "width": 1200,
+  "height": 423,
+  "defaultColumn": "overview",
+  "defaultScreen": "most_capitalized",
+  "market": "america",
+  "showToolbar": true,
+  "colorTheme": "dark",
+  "locale": "en",
+  "isTransparent": true
+}
+  </script>
+</div>
+
+<!-- TradingView Widget END -->
+        <!---stock screener ends--->
+    </div>
+
+    <div style=" margin-left: 0px"><input style="margin-left: auto height: 45px" type="text" id="number" name="number" value="symbol,code"></div>
+
+    <div style="display: inline-flex">
+            <div><input style="margin-left: auto" type="submit" class="buttonY ribbon-outset border" id="submit" name="Submit symbol and code"></div>
+        <div style="float: left; margin-left: 0px;"><button style="margin-left: auto" class= "buttonY ribbon-outset border" type="submit" id="clicking" onclick="showChart();"> <a style="color: #b29608">Show Chart with indicators</a></button></div>
+        <div style="float: left; margin-left: 0px"><button style="margin-left: auto" class="buttonY ribbon-outset border" onclick="processAlert1(); progressCircle(1200); refresh5(); return true"> <a style="color: #b29608" href="/automatictrading/"> Generate MACD Trading Signals </a></button></div>
+    </div>
+        <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Stock Chart</title>
+    <script src="https://cdn.anychart.com/releases/8.11.0/themes/monochrome.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-stock.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-data-adapter.min.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-exports.min.js"></script>
+
+    <link href="https://cdn.anychart.com/releases/8.11.0/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/8.11.0/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+
+    <style>
+      html, body, #here {
+        width: 100%; height: 100%; margin: 0; padding: 0;
+      }
+    </style>
+
+  </head>
+  <body>
+  <div style="display: flex;width:1700px; height: 900px" id="here"></div>
+  <div style="display: flex;width:1700px; height: 900px" id="here2"></div>
+    <script>
+      // All the code for the JS Stock Chart will come here
+      // set chart theme
+
+
+
+function  showChart() {
+
+    var btn = document.getElementById('here');
+    btn.innerHTML = document.getElementById("here2").innerHTML;
+    btn.addEventListener('click', func);
+
+
+function func() {
+
+  console.log(document.getElementById("number").value);
+    var text1 = document.getElementById("number").value;
+    text = text1.split(",");
+    //alert(text)
+    return text
+};
+
+func();
+
+    anychart.theme('dark');
+
+    anychart.onDocumentReady(function () {
+
+        var winner = text[0]
+        //alert(winner)
+        var winnernumber = text[1]
+
+        anychart.data.loadCsvFile(
+            'https://raw.githubusercontent.com/xxxx/winners/main/winner_' + winnernumber + '.csv',
+            function (data) {
+                // create data table on loaded data
+                var dataTable = anychart.data.table();
+
+                dataTable.addData(data);
+
+                // map loaded data for the candlestick series
+                var mapping = dataTable.mapAs({
+                    open: 1,
+                    high: 2,
+                    low: 3,
+                    close: 4
+                });
+
+                // create stock chart
+                var chart = anychart.stock();
+
+                // create first plot on the chart
+
+
+                var plot = chart.plot(0);
+
+                // set grid settings
+                plot.yGrid(true).xGrid(true).yMinorGrid(true).xMinorGrid(true);
+
+                var series = plot.candlestick(mapping)
+                    .name(winner);
+                series.legendItem().iconType('rising-falling');
+
+                // create EMA indicators with period 50
+                plot
+                    .ema(dataTable.mapAs({value: 4}))
+                    .series()
+                    .stroke('1.5 #455a64');
+
+// create envelope indicator
+                chart.plot().env(mapping);
+
+                // create scroller series with mapped data
+                chart.scroller().candlestick(mapping);
+
+                // set chart selected date/time range
+                chart.selectRange('2023-02-27', '2024-03-02');
+
+                // create range picker
+                var rangePicker = anychart.ui.rangePicker();
+
+                // init range picker
+                rangePicker.render(chart);
+
+                // create range selector
+                var rangeSelector = anychart.ui.rangeSelector();
+
+                // init range selector
+                rangeSelector.render(chart);
+
+                // sets the title of the chart
+                chart.title(winner + ' Stock Chart');
+
+                // set container id for the chart
+                chart.container('here');
+
+                // initiate chart drawing
+                //chart.draw();
+
+                // second plot to show macd values
+                var indicatorPlot = chart.plot(1);
+
+// map the values
+                var macdIndicator = indicatorPlot.macd(mapping);
+
+// set series type for histogram series.
+                macdIndicator.histogramSeries('candles');
+
+                macdIndicator
+                    .histogramSeries()
+                    .normal()
+                    .fill('green .3')
+                    .stroke('green');
+
+                macdIndicator
+                    .histogramSeries()
+                    .normal()
+                    .negativeFill('red .3')
+                    .negativeStroke('red');
+
+// set second plot's height
+                indicatorPlot.height('40%');
+
+// create awesome oscillator series
+                var aoIndicator = indicatorPlot.ao(mapping);
+
+// set rising and falling stroke settings
+                aoIndicator.series().risingStroke('green');
+                aoIndicator.series().fallingStroke('red');
+
+// set second plot's height
+                indicatorPlot.height('40%');
+
+                chart.draw()
+
+            }
+        );
+    });
+}
+
+    </script>
+</body>
+</html>
+
+<!-----stock charts end---->
+
+{% endblock %}
