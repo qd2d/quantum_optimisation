@@ -2370,9 +2370,6 @@ def insertBLOB(name, photo):
             print("the sqlite connection is closed")
 
 
-#insertBLOB("SEDQ", "C:/Users/User/qd2d/SEDG.png")
-#insertBLOB("DQ", "C:/Users/User/qd2d/DQ.png")
-
 """
 from os import curdir
 from os.path import join as pjoin
